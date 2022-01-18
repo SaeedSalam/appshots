@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AppShots</title>
+    <meta name="Description" content="AppShots - description here" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-wrap">
+                <div class="header-menu">
+                    <div class="menu-toggler" onclick="menuToggle()">
+                        <img class="bars" src="assets/images/menu.svg" alt="" />
+                        <img class="close" src="assets/images/menu-close.svg" alt="" />
+                    </div>
+                    <ul>
+                        <li class="active"><a href="#">Browse</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">UI Index</a></li>
+                    </ul>
+                </div>
+                <div class="header-logo">
+                    <h1><a href="#">AppShots</a></h1>
+                </div>
+                <div class="header-user">
+                    <a class="user-button" href="#">Feedbacks</a>
+                    <!-- <a class="user-login" href="#">Login</a> -->
+                    <div class="user-dropdown">
+                        <div onclick="userDropdownToggle()" class="user-toggler">
+                            <img src="assets/images/user.png" alt="" />
+                        </div>
+                        <div class="dropdown-box">
+                            <div class="dropdown-info">
+                                <img src="assets/images/user.png" alt="" />
+                                <div class="user-details">
+                                    <h5>John Hopkins</h5>
+                                    <p>johnhopkins@gmail.com</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#">Manage Memberships</a></li>
+                                <li><a href="#">Account Settings</a></li>
+                                <li><a href="#">Help &amp; Support</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END header -->
+
+    <!-- home carousel -->
+    <div class="home-carousel">
+        <div class="container">
+            <div class="carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/images/carousel-image-1.png" alt="AppShots" />
+                            </div>
+                            <div class="carousel-texts">
+                                <h2>👋🏻 Welcome to AppShots</h2>
+                                <p>Think about a stackoverflow for designers. You can refer to the existing apps
+                                    without
+                                    installing and finding all the corner cases. That way you don't waste time by
+                                    reinventing
+                                    the wheel.</p>
+                                <div class="carousel-button">
+                                    <a href="#">Login or Sign up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- END swiper-slide -->
+                    <div class="swiper-slide">
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/images/carousel-image-1.png" alt="AppShots" />
+                            </div>
+                            <div class="carousel-texts">
+                                <h2>Hello World! This is AppShots</h2>
+                                <p>Think about a stackoverflow for designers. You can refer to the existing apps
+                                    without
+                                    installing and finding all the corner cases. That way you don't waste time by
+                                    reinventing
+                                    the wheel.</p>
+                                <div class="carousel-button">
+                                    <a href="#">Join Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- END swiper-slide -->
+                    <div class="swiper-slide">
+                        <div class="carousel-item">
+                            <div class="carousel-image">
+                                <img src="assets/images/carousel-image-1.png" alt="AppShots" />
+                            </div>
+                            <div class="carousel-texts">
+                                <h2>AppShots makes app designing a lot easier!</h2>
+                                <p>Think about a stackoverflow for designers. You can refer to the existing apps
+                                    without
+                                    installing and finding all the corner cases. That way you don't waste time by
+                                    reinventing
+                                    the wheel.</p>
+                                <div class="carousel-button">
+                                    <a href="#">Join Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- END swiper-slide -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END home carousel -->
+
+    <!-- iOS / Android Tab -->
+    <div class="os-tab">
+        <div class="container">
+            <!-- just changing the classes here now, do set a state for this span click, and change the content respectively  -->
+            <span onClick="osTabToggle()" class="active">iOS</span>
+            <span onClick="osTabToggle()">Android</span>
+        </div>
+    </div>
+    <!-- END iOS / Android Tab -->
+
+    <!-- image type & search wrap-->
+    <div class="image-type-search-wrap">
+        <div class="container">
+            <div class="images-type">
+                <span onclick="appScreenToggle()" class="active">Apps</span>
+                <span onclick="appScreenToggle()">Screens</span>
+            </div>
+            <div class="search-wrap">
+                <div class="search-box">
+                    <input id="main-search" type="search" name="search" value=""
+                        placeholder="Search apps (Eg: Spotify)" />
+                    <div class="keyboard-nav">
+                        <!-- for mac -->
+                        <!-- <div class="mac-keys">
+                                <span>Cmd</span>
+                                <span>K</span>
+                            </div> -->
+                        <!-- END for mac -->
+                        <!-- for other -->
+                        <div class="other-keys">
+                            <span>Ctrl</span>
+                            <span>K</span>
+                        </div>
+                        <!-- END for other -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END image type & search wrap-->
+
+    <!-- Categories -->
+    <div class="categories-wrap">
+        <div class="container">
+            <div class="categories-text">Categories</div>
+            <div class="categories-slider-wrap">
+                <div class="categories-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="categories-item">Popular</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">DeFi</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Delivery</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Food &amp; Drink</div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="categories-item">Finance</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Health &amp; Fitness</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Lifestyle</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Medical</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Music</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Navigation</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Other</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Some Other</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">One More Test</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">Another Test</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-item">One More Test</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="swiper-button-next">
+                    <img src="assets/images/angle-next.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Categories -->
+
+    <div class="tab-content-wrap">
+        <div class="container">
+            <div class="tab-content tab-ios tab-active">
+                <div class="tab-section tab-section-active cards-wrap">
+                    <a href="#" class="card-box">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/app-icon.png" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Open</h3>
+                                    <span class="card-badge cb-green">version update</span>
+                                </div>
+                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
+                            </div>
+                            <div class="card-head-plus" title="save to collection">
+                                <img src="assets/images/plus.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a> <!-- END card-box -->
+                    <a href="#" class="card-box">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Gojek</h3>
+                                    <span class="card-badge cb-orange">new upload</span>
+                                </div>
+                                <div class="card-title-bottom">One app for every need</div>
+                            </div>
+                            <div class="card-head-plus" title="save to collection">
+                                <img src="assets/images/plus.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen2-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen2-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen2-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a> <!-- END card-box -->
+                    <a href="#" class="card-box">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/app-icon.png" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Open</h3>
+                                    <span class="card-badge cb-orange">new upload</span>
+                                </div>
+                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
+                            </div>
+                            <div class="card-head-plus" title="save to collection">
+                                <img src="assets/images/plus.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a> <!-- END card-box -->
+                </div> <!-- END cards-wrap -->
+
+                <div class="tab-section screens-wrap">
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-1.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-2.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-3.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-1.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-2.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-3.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-1.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-2.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END screens-wrap -->
+            </div>
+            <div class="tab-content tab-android">
+                <div class="tab-section tab-section-active cards-wrap">
+                    <a href="#" class="card-box">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Gojek</h3>
+                                    <span class="card-badge cb-orange">new upload</span>
+                                </div>
+                                <div class="card-title-bottom">One app for every need</div>
+                            </div>
+                            <div class="card-head-plus" title="save to collection">
+                                <img src="assets/images/plus.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a> <!-- END card-box -->
+                    <a href="#" class="card-box">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/app-icon.png" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Open</h3>
+                                    <span class="card-badge cb-green">version update</span>
+                                </div>
+                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
+                            </div>
+                            <div class="card-head-plus" title="save to collection">
+                                <img src="assets/images/plus.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen2-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen2-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen2-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a> <!-- END card-box -->
+                    <a href="#" class="card-box">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/app-icon.png" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Open</h3>
+                                    <span class="card-badge cb-orange">new upload</span>
+                                </div>
+                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
+                            </div>
+                            <div class="card-head-plus" title="save to collection">
+                                <img src="assets/images/plus.svg" alt="" />
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a> <!-- END card-box -->
+                </div> <!-- END cards-wrap -->
+
+                <div class="tab-section screens-wrap">
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-1.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-2.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-3.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-1.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-2.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen1-3.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-1.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-item">
+                        <a href="#" class="screen-item-image">
+                            <img src="assets/images/screen2-2.png" alt="" />
+                        </a>
+                        <div class="screen-item-overlay">
+                            <div class="screen-item-name">
+                                <img src="assets/images/app-icon2.png" alt="" />
+                                <h3>Gojek</h3>
+                            </div>
+                            <div class="screen-item-buttons">
+                                <div class="screen-item-btn" title="save to collection">
+                                    <img src="assets/images/plus.svg" alt="" />
+                                </div>
+                                <div class="screen-item-btn" title="More Options">
+                                    <img src="assets/images/more.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- END screens-wrap -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">Why AppShots?</a></li>
+                    <li><a href="#">Designing from Scratch</a></li>
+                    <li><a href="#">Lorem Ipsum</a></li>
+                    <li><a href="#">Dolor Amet</a></li>
+                    <li><a href="#">Ipsum Dolor</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Designing</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">UX Tips</a></li>
+                    <li><a href="#">Videos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Government</a></li>
+                    <li><a href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col copyright-col">
+                <h2>AppShots</h2>
+                <p>Copyright &copy; 2022.</p>
+            </div>
+        </div>
+    </div>
+    <!-- END Footer -->
+
+    <!-- Header Javascript -->
+    <script src="assets/js/header.js"></script>
+    <!-- END Header Javascript -->
+
+    <!-- Swiper Javascript -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Carousel Javascript-->
+    <script>
+        const CarouselSwiper = new Swiper('.carousel', {
+            allowTouchMove: true,
+            loop: true,
+            autoplay: true,
+            autoplay: {
+                pauseOnMouseEnter: true,
+            },
+            speed: 500,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Responsive breakpoints
+            breakpoints: {
+                1025: {
+                    allowTouchMove: false,
+                }
+            }
+        });
+    </script>
+    <!-- END Carousel Javascript -->
+
+    <!-- Categories Javascript-->
+    <script>
+        const CategorySwiper = new Swiper('.categories-slider', {
+            freeMode: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            slideToClickedSlide: true,
+            watchSlidesVisibility: true,
+            navigation: true,
+            navigation: {
+                nextEl: '.swiper-button-next'
+            },
+        });
+        // changing active class
+        CategorySwiper.on('click', function () {
+            Array.from(document.querySelectorAll('.categories-slider .swiper-slide')).forEach((element, index) => {
+                element.classList.remove('swiper-slide-active');
+            });
+            var activeSlider = document.querySelector('.categories-slider .swiper-slide:nth-child(' + (parseInt(CategorySwiper.clickedIndex) + 1) + ')');
+            activeSlider.classList.add('swiper-slide-active');
+        });
+    </script>
+    <!-- END Categories Javascript -->
+
+    <!-- OS Tab Javascript -->
+    <script src="assets/js/os-tab-toggle.js"></script>
+    <!-- END OS Tab Javascript -->
+
+    <!-- Apps / Screen Tab Javascript -->
+    <script src="assets/js/app-screen-toggle.js"></script>
+    <!-- END Apps / Screen Tab Javascript -->
+
+    <!-- Searchbar Focus Javascript -->
+    <script src="assets/js/search-focus.js"></script>
+    <!-- END Searchbar Focus Javascript -->
+</body>
+
+</html>

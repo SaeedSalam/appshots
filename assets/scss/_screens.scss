@@ -1,0 +1,117 @@
+.screens-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 0 40px;
+  @media (min-width: $xs) {
+    padding: 10px;
+    border-radius: 30px;
+  }
+  .screen-item {
+    width: calc(50% - 10px);
+    border-radius: 11px;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+    border: 1px solid #eee;
+    &:hover {
+      .screen-item-overlay {
+        opacity: 1;
+      }
+    }
+    @media (min-width: $xs) {
+      margin: 10px;
+      width: calc(50% - 20px);
+    }
+    @media (min-width: $sm) {
+      width: calc(25% - 20px);
+    }
+    @media (min-width: $md) {
+      width: calc(20% - 20px);
+    }
+  }
+  .screen-item-image {
+    display: block;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .screen-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    height: 30%;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    pointer-events: none;
+    @media (min-width: $sm) {
+      padding: 20px;
+    }
+    .screen-item-name {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      pointer-events: auto;
+      img {
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        margin-right: 4px;
+        @media (min-width: $xs) {
+          margin-right: 6px;
+          width: 28px;
+          height: 28px;
+        }
+      }
+      h3 {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        @media (min-width: $xs) {
+          font-size: 14px;
+        }
+      }
+    }
+    .screen-item-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      pointer-events: auto;
+      .screen-item-btn {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background: #fff;
+        color: #000;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 6px;
+        cursor: pointer;
+        @media (min-width: $xs) {
+          width: 24px;
+          height: 24px;
+        }
+        @media (min-width: $sm) {
+          margin-left: 10px;
+          width: 32px;
+          height: 32px;
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+}
