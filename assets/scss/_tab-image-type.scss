@@ -10,6 +10,9 @@
   }
   .images-type {
     display: flex;
+    @media (min-width: $sm) {
+      margin-right: 20px;
+    }
     span {
       display: block;
       background: #ffffff;

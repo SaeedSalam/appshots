@@ -5,10 +5,14 @@
   background: #fff;
   padding: 10px;
   border-radius: 20px;
-  margin: 0 0 40px;
+  margin: 0;
   @media (min-width: $xs) {
     padding: 10px;
     border-radius: 30px;
+    margin: 0 0 20px;
+  }
+  @media (min-width: $sm) {
+    margin: 0 0 40px;
   }
   .screen-item {
     width: calc(50% - 10px);

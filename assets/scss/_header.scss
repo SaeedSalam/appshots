@@ -175,47 +175,49 @@
 }
 
 // mobile nav menu - we are toggling a class called showNav for the body element
-body.showNav {
-  overflow: hidden;
-  .header {
-    background: #000;
-    color: #fff;
-  }
-  .header-logo a {
-    color: #fff;
-  }
-  .header-user a {
-    color: #fff;
-  }
-  .header-menu ul {
-    display: block;
-    position: fixed;
-    top: 53px;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
-    height: calc(100vh - 53px);
-    padding: 15px;
-    background: #000;
-    overflow: auto;
-    li {
+@media (max-width: 767px) {
+  body.showNav {
+    overflow: hidden;
+    .header {
+      background: #000;
+      color: #fff;
+    }
+    .header-logo a {
+      color: #fff;
+    }
+    .header-user a {
+      color: #fff;
+    }
+    .header-menu ul {
       display: block;
-      margin: 20px 0;
-      font-size: 34px;
-      &.active,
-      &:hover a {
-        color: #fff;
-      }
-      a {
+      position: fixed;
+      top: 53px;
+      left: 0;
+      z-index: 99999;
+      width: 100%;
+      height: calc(100vh - 53px);
+      padding: 15px;
+      background: #000;
+      overflow: auto;
+      li {
         display: block;
+        margin: 20px 0;
+        font-size: 34px;
+        &.active,
+        &:hover a {
+          color: #fff;
+        }
+        a {
+          display: block;
+        }
       }
     }
-  }
-  .header-menu {
-    .menu-toggler img {
-      &.close {
-        opacity: 1;
-        z-index: 2;
+    .header-menu {
+      .menu-toggler img {
+        &.close {
+          opacity: 1;
+          z-index: 2;
+        }
       }
     }
   }
