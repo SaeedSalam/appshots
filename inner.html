@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AppShots</title>
+    <title>Inner page - AppShots</title>
     <meta name="Description" content="AppShots - description here" />
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- adding following line to noindex the github page -->
@@ -33,8 +33,8 @@
                 </div>
                 <div class="header-user">
                     <a class="user-button" href="#">Feedbacks</a>
-                    <a class="user-login" href="#" onclick="loginPopupToggle(event)">Login</a>
-                    <!-- <div class="user-dropdown">
+                    <!-- <a class="user-login" href="#" onclick="loginPopupToggle(event)">Login</a> -->
+                    <div class="user-dropdown">
                         <a href="#" onclick="userDropdownToggle(event)" class="user-toggler">
                             <img src="assets/images/user.png" alt="" />
                         </a>
@@ -53,78 +53,12 @@
                                 <li><a href="#">Logout</a></li>
                             </ul>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- END header -->
-
-    <!-- home carousel -->
-    <div class="home-carousel">
-        <div class="container">
-            <div class="carousel">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="carousel-item">
-                            <div class="carousel-image">
-                                <img src="assets/images/carousel-image-1.png" alt="AppShots" />
-                            </div>
-                            <div class="carousel-texts">
-                                <h2>👋🏻 Welcome to AppShots</h2>
-                                <p>Think about a stackoverflow for designers. You can refer to the existing apps
-                                    without
-                                    installing and finding all the corner cases. That way you don't waste time by
-                                    reinventing
-                                    the wheel.</p>
-                                <div class="carousel-button">
-                                    <a href="#">Login or Sign up</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- END swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="carousel-item">
-                            <div class="carousel-image">
-                                <img src="assets/images/carousel-image-1.png" alt="AppShots" />
-                            </div>
-                            <div class="carousel-texts">
-                                <h2>Hello World! This is AppShots</h2>
-                                <p>Think about a stackoverflow for designers. You can refer to the existing apps
-                                    without
-                                    installing and finding all the corner cases. That way you don't waste time by
-                                    reinventing
-                                    the wheel.</p>
-                                <div class="carousel-button">
-                                    <a href="#">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- END swiper-slide -->
-                    <div class="swiper-slide">
-                        <div class="carousel-item">
-                            <div class="carousel-image">
-                                <img src="assets/images/carousel-image-1.png" alt="AppShots" />
-                            </div>
-                            <div class="carousel-texts">
-                                <h2>AppShots makes app designing a lot easier!</h2>
-                                <p>Think about a stackoverflow for designers. You can refer to the existing apps
-                                    without
-                                    installing and finding all the corner cases. That way you don't waste time by
-                                    reinventing
-                                    the wheel.</p>
-                                <div class="carousel-button">
-                                    <a href="#">Join Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- END swiper-slide -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END home carousel -->
 
     <!-- iOS / Android Tab -->
     <div class="os-tab">
@@ -136,13 +70,9 @@
     </div>
     <!-- END iOS / Android Tab -->
 
-    <!-- image type & search wrap-->
+    <!-- search wrap-->
     <div class="image-type-search-wrap">
         <div class="container">
-            <div class="images-type">
-                <span onclick="appScreenToggle()" class="active">Apps</span>
-                <span onclick="appScreenToggle()">Screens</span>
-            </div>
             <div class="search-wrap">
                 <div class="search-box">
                     <input id="main-search" type="search" name="search" value=""
@@ -156,7 +86,7 @@
             </div>
         </div>
     </div>
-    <!-- END image type & search wrap-->
+    <!-- END search wrap-->
 
     <!-- Categories -->
     <div class="categories-wrap">
@@ -226,94 +156,7 @@
     <div class="tab-content-wrap">
         <div class="container">
             <div class="tab-content tab-ios tab-active">
-                <div class="tab-section tab-section-active cards-wrap">
-                    <a href="#" class="card-box">
-                        <div class="card-head">
-                            <div class="card-logo">
-                                <img src="assets/images/app-icon.png" alt="" />
-                            </div>
-                            <div class="card-title">
-                                <div class="card-title-top">
-                                    <h3>Open</h3>
-                                    <span class="card-badge cb-green">version update</span>
-                                </div>
-                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
-                            </div>
-                            <div class="card-head-plus" title="save to collection">
-                                <img src="assets/images/plus.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-1.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-2.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-3.png" alt="" />
-                            </div>
-                        </div>
-                    </a> <!-- END card-box -->
-                    <a href="#" class="card-box">
-                        <div class="card-head">
-                            <div class="card-logo">
-                                <img src="assets/images/app-icon2.png" alt="" />
-                            </div>
-                            <div class="card-title">
-                                <div class="card-title-top">
-                                    <h3>Gojek</h3>
-                                    <span class="card-badge cb-orange">new upload</span>
-                                </div>
-                                <div class="card-title-bottom">One app for every need</div>
-                            </div>
-                            <div class="card-head-plus" title="save to collection">
-                                <img src="assets/images/plus.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-item">
-                                <img src="assets/images/screen2-1.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen2-2.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen2-3.png" alt="" />
-                            </div>
-                        </div>
-                    </a> <!-- END card-box -->
-                    <a href="#" class="card-box">
-                        <div class="card-head">
-                            <div class="card-logo">
-                                <img src="assets/images/app-icon.png" alt="" />
-                            </div>
-                            <div class="card-title">
-                                <div class="card-title-top">
-                                    <h3>Open</h3>
-                                    <span class="card-badge cb-orange">new upload</span>
-                                </div>
-                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
-                            </div>
-                            <div class="card-head-plus" title="save to collection">
-                                <img src="assets/images/plus.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-1.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-2.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-3.png" alt="" />
-                            </div>
-                        </div>
-                    </a> <!-- END card-box -->
-                </div> <!-- END cards-wrap -->
-
-                <div class="tab-section screens-wrap">
+                <div class="tab-section tab-section-active screens-wrap">
                     <div class="screen-item">
                         <a href="#" class="screen-item-image">
                             <img src="assets/images/screen1-1.png" alt="" />
@@ -469,94 +312,7 @@
                 </div> <!-- END screens-wrap -->
             </div>
             <div class="tab-content tab-android">
-                <div class="tab-section tab-section-active cards-wrap">
-                    <a href="#" class="card-box">
-                        <div class="card-head">
-                            <div class="card-logo">
-                                <img src="assets/images/app-icon2.png" alt="" />
-                            </div>
-                            <div class="card-title">
-                                <div class="card-title-top">
-                                    <h3>Gojek</h3>
-                                    <span class="card-badge cb-orange">new upload</span>
-                                </div>
-                                <div class="card-title-bottom">One app for every need</div>
-                            </div>
-                            <div class="card-head-plus" title="save to collection">
-                                <img src="assets/images/plus.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-1.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-2.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-3.png" alt="" />
-                            </div>
-                        </div>
-                    </a> <!-- END card-box -->
-                    <a href="#" class="card-box">
-                        <div class="card-head">
-                            <div class="card-logo">
-                                <img src="assets/images/app-icon.png" alt="" />
-                            </div>
-                            <div class="card-title">
-                                <div class="card-title-top">
-                                    <h3>Open</h3>
-                                    <span class="card-badge cb-green">version update</span>
-                                </div>
-                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
-                            </div>
-                            <div class="card-head-plus" title="save to collection">
-                                <img src="assets/images/plus.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-item">
-                                <img src="assets/images/screen2-1.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen2-2.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen2-3.png" alt="" />
-                            </div>
-                        </div>
-                    </a> <!-- END card-box -->
-                    <a href="#" class="card-box">
-                        <div class="card-head">
-                            <div class="card-logo">
-                                <img src="assets/images/app-icon.png" alt="" />
-                            </div>
-                            <div class="card-title">
-                                <div class="card-title-top">
-                                    <h3>Open</h3>
-                                    <span class="card-badge cb-orange">new upload</span>
-                                </div>
-                                <div class="card-title-bottom">breathwork, meditation, yoga</div>
-                            </div>
-                            <div class="card-head-plus" title="save to collection">
-                                <img src="assets/images/plus.svg" alt="" />
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-1.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-2.png" alt="" />
-                            </div>
-                            <div class="card-content-item">
-                                <img src="assets/images/screen1-3.png" alt="" />
-                            </div>
-                        </div>
-                    </a> <!-- END card-box -->
-                </div> <!-- END cards-wrap -->
-
-                <div class="tab-section screens-wrap">
+                <div class="tab-section tab-section-active screens-wrap">
                     <div class="screen-item">
                         <a href="#" class="screen-item-image">
                             <img src="assets/images/screen2-1.png" alt="" />
