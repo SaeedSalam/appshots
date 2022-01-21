@@ -1,3 +1,18 @@
+// check we have a mac system or not
+function getOS() {
+  let userAgent = window.navigator.userAgent.toLowerCase(),
+    macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i,
+    os = null;
+
+  if (macosPlatforms.test(userAgent)) {
+    os = "macos";
+  } else {
+    os = "nonmac";
+  }
+  return os;
+}
+document.getElementById("keysearch").classList.add(getOS());
+
 var searchBar = document.getElementById("main-search");
 
 document.onkeydown = overrideKeyboardEvent;
@@ -10,7 +25,10 @@ function overrideKeyboardEvent(e) {
       if (!keyIsDown[e.keyCode]) {
         keyIsDown[e.keyCode] = true;
         // do key down stuff here
-        if (e.ctrlKey && e.keyCode === 75) {
+        if (
+          (e.ctrlKey && e.keyCode === 75) ||
+          (e.metaKey && e.keyCode === 75)
+        ) {
           searchBar.focus();
           disabledEventPropagation(e);
           e.preventDefault();
