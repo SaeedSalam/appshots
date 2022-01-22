@@ -169,12 +169,12 @@ body {
     padding: 0 40px;
   }
   @media (min-width: $lg) {
-    // min-width:1400px
+    // min-width:1240px
     padding: 0 50px;
-    max-width: 1600px;
   }
   @media (min-width: $xl) {
-    // min-width:2000px
+    // min-width:1600px
+    max-width: 1600px;
   }
 }
 a,
@@ -183,4 +183,13 @@ a:hover {
 }
 img {
   max-width: 100%;
+}
+.content-loading {
+  width: 100%;
+  img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
 }

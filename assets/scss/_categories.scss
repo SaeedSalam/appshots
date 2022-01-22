@@ -85,5 +85,8 @@
       background: #e1e0db !important;
       cursor: not-allowed;
     }
+    &.swiper-button-lock {
+      display: none;
+    }
   }
 }

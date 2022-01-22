@@ -2,6 +2,7 @@
   .container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     margin: 0 auto 30px;
     @media (min-width: $sm) {
@@ -47,6 +48,6 @@
 .tab-content-wrap .tab-section {
   display: none;
   &.tab-section-active {
-    display: flex;
+    display: block;
   }
 }
