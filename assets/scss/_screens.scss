@@ -6,13 +6,20 @@
   padding: 10px;
   border-radius: 20px;
   margin: 0;
+  &.inner-screens {
+    background: transparent;
+    padding: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: auto;
+  }
   @media (min-width: $xs) {
     padding: 10px;
     border-radius: 30px;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
   }
   @media (min-width: $sm) {
-    margin: 0 0 40px;
+    margin-bottom: 30px;
   }
   .screen-item {
     width: calc(50% - 10px);
@@ -31,13 +38,13 @@
         display: block;
       }
     }
+    &:nth-child(2n) .screen-item-buttons .screen-item-btn ul {
+      left: auto;
+      right: 0;
+    }
     @media (min-width: $xs) {
       margin: 10px;
       width: calc(50% - 20px);
-      &:nth-child(2n) .screen-item-buttons .screen-item-btn ul {
-        left: auto;
-        right: 0;
-      }
     }
     @media (min-width: $sm) {
       width: calc(33.33% - 20px);
@@ -127,7 +134,10 @@
       }
     }
     .screen-item-buttons {
-      display: flex;
+      display: none;
+      @media (min-width: $xs) {
+        display: flex;
+      }
       flex-wrap: wrap;
       pointer-events: auto;
       .screen-item-btn {

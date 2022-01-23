@@ -186,10 +186,17 @@ img {
 }
 .content-loading {
   width: 100%;
+  margin: 20px 0 0;
+  @media (min-width: $sm) {
+    margin: 0;
+  }
   img {
-    width: 50px;
+    width: 40px;
     display: block;
     margin: 0 auto;
     object-fit: contain;
+    @media (min-width: $sm) {
+      width: 50px;
+    }
   }
 }

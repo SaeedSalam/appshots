@@ -10,13 +10,14 @@
     }
   }
   .categories-text {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.1em;
     color: #757575;
     text-transform: uppercase;
     margin: 0 0 10px;
     @media (min-width: $sm) {
       margin: 0 12px 0 0;
+      font-size: 14px;
     }
   }
 
