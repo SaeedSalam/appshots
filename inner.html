@@ -77,9 +77,12 @@
                 </div>
                 <!-- END iOS / Android Tab -->
                 <div class="inner-app-details">
-                    <div class="app-logo">
+                    <div class="app-logo app-ios-logo">
                         <img src="assets/images/app-icon-big.png" width="172" height="172" alt="logo" />
                     </div>
+                    <!-- <div class="app-logo app-android-logo">
+                        <img src="assets/images/app-icon-big.png" width="172" height="172" alt="logo" />
+                    </div> -->
                     <h1>Open</h1>
                     <div class="app-desc">Breathwork, meditation, yoga</div>
                     <div class="app-owner">&copy; 2021 Open</div>
@@ -87,10 +90,38 @@
                 <div class="right-buttons">
                     <div class="rounded-btn" data-tooltip="Save to collection"><img src="assets/images/plus.svg"
                             alt="save" /></div>
-                    <button type="button" class="rounded-btn" data-tooltip="Share"><img src="assets/images/share.svg"
-                            alt="share" /></button>
+                    <button type="button" class="rounded-btn" data-tooltip="Share" onclick="shareBoxToggle()"><img
+                            src="assets/images/share.svg" alt="share" /></button>
+                    <div class="share-box">
+                        <h4>Share this app</h4>
+                        <div class="share-url-box">
+                            <div class="share-copied">Copied to Clipboard</div>
+                            <div class="share-url">
+                                https://appshots.design/apps/open-android-app-dummy-share-url-XSADWC65754674
+                            </div>
+                            <div class="share-copy" onclick="copyLink()">
+                                <img src="assets/images/share-copy.svg" alt="copy" />
+                            </div>
+                        </div>
+                        <div class="share-others">
+                            <button type="button" class="share-other-item">
+                                <img src="assets/images/share-fb.svg" alt="facebook" />
+                                <span>Facebook</span>
+                            </button>
+                            <button type="button" class="share-other-item">
+                                <img src="assets/images/share-tw.svg" alt="twitter" />
+                                <span>Twitter</span>
+                            </button>
+                            <button type="button" class="share-other-item">
+                                <img src="assets/images/share-email.svg" alt="email" />
+                                <span>Email</span>
+                            </button>
+                        </div>
+                    </div>
                     <a href="#" class="rounded-btn" data-tooltip="View on App Store"><img
                             src="assets/images/appstore.svg" alt="download" /></a>
+                    <!-- <a href="#" class="rounded-btn" data-tooltip="View on Play Store"><img
+                                src="assets/images/playstore.svg" alt="download" /></a> -->
                 </div>
             </div>
         </div>
@@ -1278,6 +1309,10 @@
     <!-- screen-item more option script -->
     <script src="assets/js/more-options.js"></script>
     <!-- END screen-item more option script -->
+
+    <!-- share app script-->
+    <script src="assets/js/share-app.js"></script>
+    <!-- END share app script-->
 </body>
 
 </html>
