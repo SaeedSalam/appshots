@@ -378,9 +378,18 @@
 .hide {
   display: none !important;
 }
+.search-mobile-close {
+  display: none;
+}
 
 // mobile view
 @media (max-width: $sm) {
+  .search-wrap {
+    .search-box input {
+      height: 45px;
+      background-size: 20px;
+    }
+  }
   .search-wrap.show-search-results {
     position: fixed;
     top: 0;
@@ -390,7 +399,30 @@
     background: #fff;
     height: 100vh;
     padding: 15px;
+    .search-mobile-close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      img {
+        display: block;
+        margin:0;
+      }
+    }
+    .search-box {
+      padding-left: 35px;
+      input {
+        background: #fff;
+        padding: 10px 15px;
+      }
+    }
   }
+
   .search-wrap.show-search-results .search-results {
     display: block;
     position: absolute;
