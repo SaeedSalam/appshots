@@ -116,24 +116,38 @@ function disabledEventPropagation(e) {
     }
   }
 }
+
+function closeSearch() {
+  searchWrap.classList.remove("show-search-results");
+  document
+    .querySelectorAll(".search-results-filter")[0]
+    .classList.remove("show-children", "show-results");
+  removeActiveClass();
+  searchBar.value = "";
+  suggestedFilters.classList.remove("hide");
+  searchRightSection.innerHTML = "";
+}
+
 var suggestedFilters = document.getElementById("suggestedFilters");
 
 // search box close on outside click
-document.addEventListener("click", function (event) {
-  var isClickInside = searchWrap.contains(event.target);
+if (searchWrap) {
+  document.addEventListener("click", function (event) {
+    var isClickInside = searchWrap.contains(event.target);
 
-  if (!isClickInside) {
-    // the click was outside the searchResults
-    searchWrap.classList.remove("show-search-results");
-    document
-      .querySelectorAll(".search-results-filter")[0]
-      .classList.remove("show-children", "show-results");
-    removeActiveClass();
-    searchBar.value = "";
-    suggestedFilters.classList.remove("hide");
-    searchRightSection.innerHTML = "";
-  }
-});
+    if (!isClickInside) {
+      // the click was outside the searchResults
+      searchWrap.classList.remove("show-search-results");
+      document
+        .querySelectorAll(".search-results-filter")[0]
+        .classList.remove("show-children", "show-results");
+      removeActiveClass();
+      searchBar.value = "";
+      suggestedFilters.classList.remove("hide");
+      searchRightSection.innerHTML = "";
+    }
+  });
+}
 
 function dummySearch() {
   searchRightSection.innerHTML = "";

@@ -8,11 +8,12 @@ function moreDropdown(e) {
   e.closest(".screen-item").classList.toggle("active");
 }
 var screenWrap = document.querySelectorAll(".screens-wrap")[0];
-
-document.addEventListener("click", function (event) {
-  var isClickOnScreenItem = screenWrap.contains(event.target);
-  if (!isClickOnScreenItem) {
-    // the click was outside the screenwrap
-    removeActiveScreenClass();
-  }
-});
+if (screenWrap) {
+  document.addEventListener("click", function (event) {
+    var isClickOnScreenItem = screenWrap.contains(event.target);
+    if (!isClickOnScreenItem) {
+      // the click was outside the screenwrap
+      removeActiveScreenClass();
+    }
+  });
+}
