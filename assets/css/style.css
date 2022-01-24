@@ -354,6 +354,8 @@ img { max-width: 100%; }
 @media (min-width: 500px) { .screens-wrap .screen-item-overlay .screen-item-name img { margin-right: 6px; width: 28px; height: 28px; } }
 .screens-wrap .screen-item-overlay .screen-item-name h3 { color: #fff; font-size: 13px; font-weight: 600; }
 @media (min-width: 500px) { .screens-wrap .screen-item-overlay .screen-item-name h3 { font-size: 14px; } }
+.screens-wrap .screen-item-overlay .screen-item-name h3 a { color: #fff; text-decoration: none; }
+.screens-wrap .screen-item-overlay .screen-item-name h3 a:hover { text-decoration: underline; }
 .screens-wrap .screen-item-overlay .screen-item-buttons { display: none; -ms-flex-wrap: wrap; flex-wrap: wrap; pointer-events: auto; }
 @media (min-width: 500px) { .screens-wrap .screen-item-overlay .screen-item-buttons { display: -webkit-box; display: -ms-flexbox; display: flex; } }
 .screens-wrap .screen-item-overlay .screen-item-buttons .screen-item-btn { width: 20px; height: 20px; border-radius: 5px; background: #e1e0db; color: #000; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-left: 6px; cursor: pointer; position: relative; }
@@ -445,6 +447,7 @@ body.showLoginPopup .login-wrap { display: block !important; }
 @media (min-width: 768px) { .inner-top-section .inner-app-details { padding: 50px 0; } }
 @media (min-width: 1024px) { .inner-top-section .inner-app-details { padding: 60px 0; } }
 .inner-top-section .inner-app-details .app-logo img { display: block; width: 172px; height: 172px; border-radius: 45px; margin: 0 auto; }
+.inner-top-section .inner-app-details .app-logo.app-android-logo img { border-radius: 50%; }
 .inner-top-section .inner-app-details h1 { margin: 20px 0 0; font-weight: 800; font-size: 40px; line-height: 1.4; color: #000000; }
 @media (min-width: 768px) { .inner-top-section .inner-app-details h1 { font-size: 50px; margin: 30px 0 0; } }
 @media (min-width: 1024px) { .inner-top-section .inner-app-details h1 { font-size: 64px; margin: 40px 0 0; } }
@@ -473,5 +476,21 @@ body.showLoginPopup .login-wrap { display: block !important; }
 .screen-popup .prev-btn.disabled, .screen-popup .next-btn.disabled { cursor: not-allowed; }
 .screen-popup .prev-btn { left: 0; }
 .screen-popup .next-btn { right: 0; }
+
+.share-box { -webkit-box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 6px; box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 6px; background: #fff; border-radius: 10px; position: absolute; left: 0; bottom: calc(100% + 15px); width: 100%; text-align: left; padding: 10px; font-weight: 600; color: #444; font-size: 14px; z-index: 99; display: none; }
+@media (min-width: 768px) { .share-box { left: auto; bottom: auto; right: 0; top: auto; margin-top: -10px; width: 100%; min-width: 350px; } }
+.share-box.show-share-box { display: block; }
+.share-box h4 { font-size: 14px; border-bottom: 1px solid #e5e5e5; padding: 0 0 10px; color: #222; }
+.share-box .share-url-box { position: relative; background: #eee; padding: 10px; border-radius: 8px; padding-right: 40px; margin: 15px 0; }
+.share-box .share-copied { display: none; font-size: 12px; color: #444; background: #fff; position: fixed; bottom: 10px; right: 10px; width: -webkit-max-content; width: -moz-max-content; width: max-content; padding: 10px 20px; font-weight: 700; border-radius: 20px; -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); z-index: 999; }
+@media (min-width: 768px) { .share-box .share-copied { padding: 15px 30px; bottom: 20px; right: 20px; font-size: 14px; } }
+.share-box .share-copied.show-copied { display: block; }
+.share-box .share-url { white-space: nowrap; overflow: auto; scrollbar-width: none; }
+.share-box .share-copy { width: 20px; position: absolute; right: 10px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); cursor: pointer; }
+.share-box .share-copy img { display: block; width: 16px; height: 16px; -o-object-fit: cover; object-fit: cover; margin: 0 auto; }
+.share-box .share-others { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: auto; margin: 0 -5px; }
+.share-box .share-other-item { background: #fff; border: 2px solid #bbb; padding: 5px 15px; border-radius: 6px; margin: 0 5px; width: calc(33.33% - 10px); font-size: 12px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; cursor: pointer; }
+.share-box .share-other-item:hover { border-color: #999; }
+.share-box .share-other-item img { display: block; width: 16px; margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */
