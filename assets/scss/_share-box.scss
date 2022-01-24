@@ -1,0 +1,113 @@
+.share-box {
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 6px;
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 15px);
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+  z-index: 99;
+  display: none;
+  @media (min-width: $sm) {
+    left: auto;
+    bottom: auto;
+    right: 0;
+    top: auto;
+    margin-top: -10px;
+    width: 100%;
+    min-width: 350px;
+  }
+  &.show-share-box {
+    display: block;
+  }
+  h4 {
+    font-size: 14px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 0 10px;
+    color: #222;
+  }
+  .share-url-box {
+    position: relative;
+    background: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    padding-right: 40px;
+    margin: 15px 0;
+  }
+  .share-copied {
+    display: none;
+    font-size: 12px;
+    color: #444;
+    background: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: max-content;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    @media (min-width: $sm) {
+      padding: 15px 30px;
+      bottom: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+    &.show-copied {
+      display: block;
+    }
+  }
+  .share-url {
+    white-space: nowrap;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+  .share-copy {
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    img {
+      display: block;
+      width: 16px;
+      height: 16px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  }
+  .share-others {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0 -5px;
+  }
+  .share-other-item {
+    background: #fff;
+    border: 2px solid #bbb;
+    padding: 5px 15px;
+    border-radius: 6px;
+    margin: 0 5px;
+    width: calc(33.33% - 10px);
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      border-color: #999;
+    }
+    img {
+      display: block;
+      width: 16px;
+      margin-right: 5px;
+    }
+  }
+}

@@ -113,6 +113,11 @@
         border-radius: 45px;
         margin: 0 auto;
       }
+      &.app-android-logo {
+        img {
+          border-radius: 50%;
+        }
+      }
     }
     h1 {
       margin: 20px 0 0;

@@ -131,6 +131,13 @@
         @media (min-width: $xs) {
           font-size: 14px;
         }
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
     .screen-item-buttons {
