@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="header-logo">
-                    <h1><a href="#">AppShots</a></h1>
+                    <h1><a href="index.html">AppShots</a></h1>
                 </div>
                 <div class="header-user">
                     <!-- <a class="user-button" href="#">Feedbacks</a> -->
@@ -78,7 +78,7 @@
                                     reinventing
                                     the wheel.</p>
                                 <div class="carousel-button">
-                                    <a href="#">Login or Sign up</a>
+                                    <a href="#" onclick="loginPopupToggle(event)">Login or Sign up</a>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                     reinventing
                                     the wheel.</p>
                                 <div class="carousel-button">
-                                    <a href="#">Join Now</a>
+                                    <a href="#" onclick="loginPopupToggle(event)">Join Now</a>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                                     reinventing
                                     the wheel.</p>
                                 <div class="carousel-button">
-                                    <a href="#">Join Now</a>
+                                    <a href="#" onclick="loginPopupToggle(event)">Join Now</a>
                                 </div>
                             </div>
                         </div>
@@ -145,6 +145,9 @@
             </div>
             <div class="search-wrap">
                 <div class="search-box">
+                    <div class="reset-search" onclick="resetSearch()">
+                        <img src="assets/images/menu-back.svg" alt="reset" />
+                    </div>
                     <div class="search-mobile-close" onclick="closeSearch()">
                         <img src="assets/images/close-small.svg" alt="" />
                     </div>
@@ -158,8 +161,9 @@
                 </div>
                 <div class="search-results">
                     <div class="search-results-filter">
-                        <div>
+                        <div class="search-results-wrap">
                             <ul class="search-results-items single-level" data-title="Apps">
+                                <!-- <li class="searching">Searching apps...</li> -->
                                 <li class="search-filter-category">
                                     <a class="search-item-link" href="#">
                                         <div class="search-item-img">
@@ -171,7 +175,7 @@
                                         </div>
                                     </a>
                                     <div class="search-item-right">
-                                        <h6>Business1<span>App Categories</span></h6>
+                                        <h6>Airbnb</h6>
                                         <p>Business apps assist with running a business or provide a means
                                             to
                                             collaborate, edit, or share content.</p>
@@ -179,8 +183,16 @@
                                             <img src="assets/images/screen1-1.png" alt="" />
                                             <img src="assets/images/screen2-1.png" alt="" />
                                             <img src="assets/images/screen1-1.png" alt="" />
-                                            <img src="assets/images/screen2-1.png" alt="" />
-                                            <img src="assets/images/screen1-1.png" alt="" />
+                                            <div class="search-item-info">
+                                                <div class="app-category-info">
+                                                    <span class="info-meta">App Category</span>
+                                                    <span class="info-title">Travel</span>
+                                                </div>
+                                                <div class="app-category-info">
+                                                    <span class="info-meta">Last Updated</span>
+                                                    <span class="info-title">December 2021</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -190,12 +202,12 @@
                                             <img src="assets/images/app-icon.png" alt="" />
                                         </div>
                                         <div class="search-item-texts">
-                                            <span>Business2</span>
+                                            <span>Another Name</span>
                                             <p>Filter by app categories</p>
                                         </div>
                                     </a>
                                     <div class="search-item-right">
-                                        <h6>Business2<span>App Categories</span></h6>
+                                        <h6>Another Name</h6>
                                         <p>Business apps assist with running a business or provide a means
                                             to
                                             collaborate, edit, or share content. Business apps assist with running a
@@ -209,8 +221,16 @@
                                             <img src="assets/images/screen1-1.png" alt="" />
                                             <img src="assets/images/screen2-1.png" alt="" />
                                             <img src="assets/images/screen1-1.png" alt="" />
-                                            <img src="assets/images/screen2-1.png" alt="" />
-                                            <img src="assets/images/screen1-1.png" alt="" />
+                                            <div class="search-item-info">
+                                                <div class="app-category-info">
+                                                    <span class="info-meta">App Category</span>
+                                                    <span class="info-title">Travel</span>
+                                                </div>
+                                                <div class="app-category-info">
+                                                    <span class="info-meta">Last Updated</span>
+                                                    <span class="info-title">December 2021</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -220,12 +240,12 @@
                                             <img src="assets/images/app-icon2.png" alt="" />
                                         </div>
                                         <div class="search-item-texts">
-                                            <span>Business3</span>
+                                            <span>Another Big Name</span>
                                             <p>Filter by app categories</p>
                                         </div>
                                     </a>
                                     <div class="search-item-right">
-                                        <h6>Business3<span>App Categories</span></h6>
+                                        <h6>Another Big Name</h6>
                                         <p>Business apps assist with running a business or provide a means
                                             to
                                             collaborate, edit, or share content.</p>
@@ -233,8 +253,16 @@
                                             <img src="assets/images/screen1-1.png" alt="" />
                                             <img src="assets/images/screen2-1.png" alt="" />
                                             <img src="assets/images/screen1-1.png" alt="" />
-                                            <img src="assets/images/screen2-1.png" alt="" />
-                                            <img src="assets/images/screen1-1.png" alt="" />
+                                            <div class="search-item-info">
+                                                <div class="app-category-info">
+                                                    <span class="info-meta">App Category</span>
+                                                    <span class="info-title">Travel</span>
+                                                </div>
+                                                <div class="app-category-info">
+                                                    <span class="info-meta">Last Updated</span>
+                                                    <span class="info-title">December 2021</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -496,7 +524,7 @@
             <div class="tab-content tab-ios tab-active">
                 <div class="tab-section tab-section-active">
                     <div class="cards-wrap">
-                        <a href="#" class="card-box">
+                        <a href="inner.html" class="card-box">
                             <div class="card-head">
                                 <div class="card-logo">
                                     <img src="assets/images/app-icon.png" alt="" />
@@ -508,7 +536,7 @@
                                     </div>
                                     <div class="card-title-bottom">breathwork, meditation, yoga</div>
                                 </div>
-                                <div class="card-head-plus" title="Save to collection">
+                                <div class="card-head-plus" data-tooltip="Save to collection">
                                     <img src="assets/images/plus.svg" alt="" />
                                 </div>
                             </div>
@@ -524,7 +552,7 @@
                                 </div>
                             </div>
                         </a> <!-- END card-box -->
-                        <a href="#" class="card-box">
+                        <a href="inner.html" class="card-box">
                             <div class="card-head">
                                 <div class="card-logo">
                                     <img src="assets/images/app-icon2.png" alt="" />
@@ -536,7 +564,7 @@
                                     </div>
                                     <div class="card-title-bottom">One app for every need</div>
                                 </div>
-                                <div class="card-head-plus" title="Save to collection">
+                                <div class="card-head-plus" data-tooltip="Save to collection">
                                     <img src="assets/images/plus.svg" alt="" />
                                 </div>
                             </div>
@@ -552,7 +580,7 @@
                                 </div>
                             </div>
                         </a> <!-- END card-box -->
-                        <a href="#" class="card-box">
+                        <a href="inner.html" class="card-box">
                             <div class="card-head">
                                 <div class="card-logo">
                                     <img src="assets/images/app-icon.png" alt="" />
@@ -564,7 +592,7 @@
                                     </div>
                                     <div class="card-title-bottom">breathwork, meditation, yoga</div>
                                 </div>
-                                <div class="card-head-plus" title="Save to collection">
+                                <div class="card-head-plus" data-tooltip="Save to collection">
                                     <img src="assets/images/plus.svg" alt="" />
                                 </div>
                             </div>
@@ -589,7 +617,7 @@
                 <div class="tab-section">
                     <div class="screens-wrap">
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-1.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -598,7 +626,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -628,7 +656,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-2.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -637,7 +665,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -667,7 +695,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-3.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -676,7 +704,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -706,7 +734,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-1.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -715,7 +743,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -745,7 +773,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-2.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -754,7 +782,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -784,7 +812,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-3.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -793,7 +821,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -823,7 +851,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-1.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -832,7 +860,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -862,7 +890,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-2.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -871,7 +899,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -910,7 +938,7 @@
             <div class="tab-content tab-android">
                 <div class="tab-section tab-section-active">
                     <div class="cards-wrap">
-                        <a href="#" class="card-box">
+                        <a href="inner.html" class="card-box">
                             <div class="card-head">
                                 <div class="card-logo">
                                     <img src="assets/images/app-icon2.png" alt="" />
@@ -922,7 +950,7 @@
                                     </div>
                                     <div class="card-title-bottom">One app for every need</div>
                                 </div>
-                                <div class="card-head-plus" title="Save to collection">
+                                <div class="card-head-plus" data-tooltip="Save to collection">
                                     <img src="assets/images/plus.svg" alt="" />
                                 </div>
                             </div>
@@ -938,7 +966,7 @@
                                 </div>
                             </div>
                         </a> <!-- END card-box -->
-                        <a href="#" class="card-box">
+                        <a href="inner.html" class="card-box">
                             <div class="card-head">
                                 <div class="card-logo">
                                     <img src="assets/images/app-icon.png" alt="" />
@@ -950,7 +978,7 @@
                                     </div>
                                     <div class="card-title-bottom">breathwork, meditation, yoga</div>
                                 </div>
-                                <div class="card-head-plus" title="Save to collection">
+                                <div class="card-head-plus" data-tooltip="Save to collection">
                                     <img src="assets/images/plus.svg" alt="" />
                                 </div>
                             </div>
@@ -966,7 +994,7 @@
                                 </div>
                             </div>
                         </a> <!-- END card-box -->
-                        <a href="#" class="card-box">
+                        <a href="inner.html" class="card-box">
                             <div class="card-head">
                                 <div class="card-logo">
                                     <img src="assets/images/app-icon.png" alt="" />
@@ -978,7 +1006,7 @@
                                     </div>
                                     <div class="card-title-bottom">breathwork, meditation, yoga</div>
                                 </div>
-                                <div class="card-head-plus" title="Save to collection">
+                                <div class="card-head-plus" data-tooltip="Save to collection">
                                     <img src="assets/images/plus.svg" alt="" />
                                 </div>
                             </div>
@@ -1003,7 +1031,7 @@
                 <div class="tab-section">
                     <div class="screens-wrap">
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-1.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1012,7 +1040,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1042,7 +1070,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-2.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1051,7 +1079,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1081,7 +1109,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-3.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1090,7 +1118,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1120,7 +1148,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-1.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1129,7 +1157,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1159,7 +1187,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-2.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1168,7 +1196,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1198,7 +1226,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen1-3.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1207,7 +1235,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1237,7 +1265,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-1.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1246,7 +1274,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1276,7 +1304,7 @@
                             </div>
                         </div>
                         <div class="screen-item">
-                            <a href="#" class="screen-item-image">
+                            <a href="screen-popup.html" class="screen-item-image">
                                 <img src="assets/images/screen2-2.png" alt="" />
                             </a>
                             <div class="screen-item-overlay">
@@ -1285,7 +1313,7 @@
                                     <h3>Gojek</h3>
                                 </div>
                                 <div class="screen-item-buttons">
-                                    <div class="screen-item-btn" data-title="Save to collection">
+                                    <div class="screen-item-btn" data-data-tooltip="Save to collection">
                                         <img src="assets/images/plus.svg" alt="" />
                                     </div>
                                     <div class="screen-item-btn" onclick="moreDropdown(this)">
@@ -1321,175 +1349,137 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                <div class="footer-col">
-                    <h4>Features</h4>
-                    <ul>
-                        <li><a href="#">Why AppShots?</a></li>
-                        <li><a href="#">Designing from Scratch</a></li>
-                        <li><a href="#">Lorem Ipsum</a></li>
-                        <li><a href="#">Dolor Amet</a></li>
-                        <li><a href="#">Ipsum Dolor</a></li>
-                    </ul>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2022 Appshots. All Rights Reserved.</p>
+            <p><a href="#">Terms &amp; Privacy</a></p>
+        </div>
+    </div>
+    <!-- END Footer -->
+
+    <!-- Login Page / Popup -->
+    <div class="login-wrap" style="display: none;">
+        <!-- hiding the popup with inline css just for demo purpose-->
+        <div class="login-close" onclick="loginPopupToggle(event)">X</div>
+        <div class="container">
+            <h2>Login or Sign up</h2>
+            <div class="form-wrap">
+                <div class="social-login-item">
+                    <a href="#">
+                        <img src="assets/images/google.svg" alt="google">
+                        <span>Continue with Google</span>
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Designing</a></li>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="#">UX Tips</a></li>
-                        <li><a href="#">Videos</a></li>
-                    </ul>
+                <div class="social-login-item">
+                    <a href="#">
+                        <img src="assets/images/fb.svg" alt="facebook">
+                        <span>Continue with Facebook</span>
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h4>Categories</h4>
-                    <ul>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Government</a></li>
-                        <li><a href="#">Gaming</a></li>
-                    </ul>
+                <div class="social-login-item">
+                    <a href="#">
+                        <img src="assets/images/twitter.svg" alt="twitter">
+                        <span>Continue with Twitter</span>
+                    </a>
                 </div>
-                <div class="footer-col">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col copyright-col">
-                    <h2>AppShots</h2>
-                    <p>Copyright &copy; 2022.</p>
+                <div class="email-login">
+                    <div class="or-text"><span>Or</span></div>
+                    <div class="email-ip-wrap">
+                        <input type="email" class="email-ip" name="email" value="" placeholder="Enter email address" />
+                    </div>
+                    <input type="submit" name="" value="Continue with Email" class="email-button" />
                 </div>
             </div>
-        </div>
-        <!-- END Footer -->
-
-        <!-- Login Page / Popup -->
-        <div class="login-wrap" style="display: none;">
-            <!-- hiding the popup with inline css just for demo purpose-->
-            <div class="login-close" onclick="loginPopupToggle(event)">X</div>
-            <div class="container">
-                <h2>Login or Sign up</h2>
-                <div class="form-wrap">
-                    <div class="social-login-item">
-                        <a href="#">
-                            <img src="assets/images/google.svg" alt="google">
-                            <span>Continue with Google</span>
-                        </a>
-                    </div>
-                    <div class="social-login-item">
-                        <a href="#">
-                            <img src="assets/images/fb.svg" alt="facebook">
-                            <span>Continue with Facebook</span>
-                        </a>
-                    </div>
-                    <div class="social-login-item">
-                        <a href="#">
-                            <img src="assets/images/twitter.svg" alt="twitter">
-                            <span>Continue with Twitter</span>
-                        </a>
-                    </div>
-                    <div class="email-login">
-                        <div class="or-text"><span>Or</span></div>
-                        <div class="email-ip-wrap">
-                            <input type="email" class="email-ip" name="" value="" placeholder="Enter email address" />
-                        </div>
-                        <input type="submit" name="" value="Continue with Email" class="email-button" />
-                    </div>
-                </div>
-                <div class="bottom-texts">
-                    By continuing, you acknowledge that you have read and
-                    understood, and agree to Appshot's <a href="#">Terms of Service</a> and <a href="#">Privacy
-                        Policy</a>.
-                </div>
+            <div class="bottom-texts">
+                By continuing, you acknowledge that you have read and
+                understood, and agree to Appshot's <a href="#">Terms of Service</a> and <a href="#">Privacy
+                    Policy</a>.
             </div>
         </div>
-        <!-- END Login Page / Popup -->
+    </div>
+    <!-- END Login Page / Popup -->
 
-        <!-- Header Javascript -->
-        <script src="assets/js/header.js"></script>
-        <!-- END Header Javascript -->
+    <!-- Header Javascript -->
+    <script src="assets/js/header.js"></script>
+    <!-- END Header Javascript -->
 
-        <!-- Swiper Javascript -->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Swiper Javascript -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
-        <!-- Carousel Javascript-->
-        <script>
-            const CarouselSwiper = new Swiper('.carousel', {
-                allowTouchMove: true,
-                loop: true,
-                autoplay: true,
-                autoplay: {
-                    pauseOnMouseEnter: false,
-                },
-                speed: 500,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                // Responsive breakpoints
-                breakpoints: {
-                    1025: {
-                        allowTouchMove: false,
-                    }
+    <!-- Carousel Javascript-->
+    <script>
+        const CarouselSwiper = new Swiper('.carousel', {
+            allowTouchMove: true,
+            loop: true,
+            autoplay: true,
+            autoplay: {
+                pauseOnMouseEnter: false,
+            },
+            speed: 500,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Responsive breakpoints
+            breakpoints: {
+                1025: {
+                    allowTouchMove: false,
                 }
+            }
+        });
+    </script>
+    <!-- END Carousel Javascript -->
+
+    <!-- Categories Javascript-->
+    <script>
+        const CategorySwiper = new Swiper('.categories-slider', {
+            freeMode: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            slideToClickedSlide: true,
+            watchSlidesVisibility: true,
+            navigation: true,
+            navigation: {
+                nextEl: '.swiper-button-next'
+            },
+        });
+        // changing active class
+        CategorySwiper.on('click', function () {
+            Array.from(document.querySelectorAll('.categories-slider .swiper-slide')).forEach((element, index) => {
+                element.classList.remove('swiper-slide-active');
             });
-        </script>
-        <!-- END Carousel Javascript -->
+            var activeSlider = document.querySelector('.categories-slider .swiper-slide:nth-child(' + (parseInt(CategorySwiper.clickedIndex) + 1) + ')');
+            activeSlider.classList.add('swiper-slide-active');
+        });
+    </script>
+    <!-- END Categories Javascript -->
 
-        <!-- Categories Javascript-->
-        <script>
-            const CategorySwiper = new Swiper('.categories-slider', {
-                freeMode: true,
-                slidesPerView: "auto",
-                spaceBetween: 10,
-                slideToClickedSlide: true,
-                watchSlidesVisibility: true,
-                navigation: true,
-                navigation: {
-                    nextEl: '.swiper-button-next'
-                },
-            });
-            // changing active class
-            CategorySwiper.on('click', function () {
-                Array.from(document.querySelectorAll('.categories-slider .swiper-slide')).forEach((element, index) => {
-                    element.classList.remove('swiper-slide-active');
-                });
-                var activeSlider = document.querySelector('.categories-slider .swiper-slide:nth-child(' + (parseInt(CategorySwiper.clickedIndex) + 1) + ')');
-                activeSlider.classList.add('swiper-slide-active');
-            });
-        </script>
-        <!-- END Categories Javascript -->
+    <!-- OS Tab Javascript -->
+    <script src="assets/js/os-tab-toggle.js"></script>
+    <!-- END OS Tab Javascript -->
 
-        <!-- OS Tab Javascript -->
-        <script src="assets/js/os-tab-toggle.js"></script>
-        <!-- END OS Tab Javascript -->
+    <!-- Apps / Screen Tab Javascript -->
+    <script src="assets/js/app-screen-toggle.js"></script>
+    <!-- END Apps / Screen Tab Javascript -->
 
-        <!-- Apps / Screen Tab Javascript -->
-        <script src="assets/js/app-screen-toggle.js"></script>
-        <!-- END Apps / Screen Tab Javascript -->
+    <!-- Searchbar Focus Javascript -->
+    <script src="assets/js/search-focus.js"></script>
+    <!-- END Searchbar Focus Javascript -->
 
-        <!-- Searchbar Focus Javascript -->
-        <script src="assets/js/search-focus.js"></script>
-        <!-- END Searchbar Focus Javascript -->
+    <!-- Login Popup Javascript - for demo -->
+    <script src="assets/js/login.js"></script>
+    <!-- END Login Popup Javascript -->
 
-        <!-- Login Popup Javascript - for demo -->
-        <script src="assets/js/login.js"></script>
-        <!-- END Login Popup Javascript -->
-
-        <!-- screen-item more option script -->
-        <script src="assets/js/more-options.js"></script>
-        <!-- END screen-item more option script -->
+    <!-- screen-item more option script -->
+    <script src="assets/js/more-options.js"></script>
+    <!-- END screen-item more option script -->
 
 </body>
 
