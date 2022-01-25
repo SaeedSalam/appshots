@@ -54,7 +54,8 @@ img { max-width: 100%; }
 .content-loading img { width: 40px; display: block; margin: 0 auto; -o-object-fit: contain; object-fit: contain; }
 @media (min-width: 768px) { .content-loading img { width: 50px; } }
 
-.header { position: relative; background: #ffffff; -webkit-box-shadow: 0px 2px 8px 3px rgba(218, 217, 214, 0.4); box-shadow: 0px 2px 8px 3px rgba(218, 217, 214, 0.4); margin: 0 0 30px; }
+.header { position: relative; background: #ffffff; -webkit-box-shadow: 0px 2px 8px 3px rgba(218, 217, 214, 0.4); box-shadow: 0px 2px 8px 3px rgba(218, 217, 214, 0.4); margin: 0 0 20px; }
+@media (min-width: 768px) { .header { margin: 0 0 30px; } }
 
 .header-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; min-height: 53px; position: relative; }
 
