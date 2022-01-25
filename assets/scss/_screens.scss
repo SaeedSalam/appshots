@@ -83,6 +83,7 @@
   .screen-item-image {
     display: block;
     border-radius: 11px;
+    cursor: zoom-in;
     img {
       display: block;
       width: 100%;
@@ -110,14 +111,13 @@
     }
     .screen-item-name {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       pointer-events: auto;
       img {
         display: block;
         width: 22px;
         height: 22px;
-        border-radius: 50%;
+        border-radius: 8px;
         margin-right: 4px;
         @media (min-width: $xs) {
           margin-right: 6px;
@@ -125,10 +125,18 @@
           height: 28px;
         }
       }
+      &.android-item {
+        img {
+          border-radius: 50%;
+        }
+      }
       h3 {
         color: #fff;
         font-size: 13px;
         font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         @media (min-width: $xs) {
           font-size: 14px;
         }
@@ -146,7 +154,6 @@
       @media (min-width: $xs) {
         display: flex;
       }
-      flex-wrap: wrap;
       pointer-events: auto;
       .screen-item-btn {
         width: 20px;
