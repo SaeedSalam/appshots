@@ -1,4 +1,5 @@
 // check we have a mac system or not
+// to show cmd or ctrl icon in search bar
 function getOS() {
   let userAgent = window.navigator.userAgent.toLowerCase(),
     macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i,
@@ -15,10 +16,29 @@ document.getElementById("keysearch").classList.add(getOS());
 
 // Search Results div
 var searchWrap = document.querySelectorAll(".search-wrap")[0];
+var suggestedFilters = document.getElementById("suggestedFilters");
+var searchBar = document.getElementById("main-search");
 
 // display search result on search focus
 function showSearchResults() {
+  document.body.classList.add("search-active");
   searchWrap.classList.add("show-search-results");
+}
+
+// search close function
+function hideSearchResults() {
+  document.body.classList.remove("search-active");
+  searchWrap.classList.remove("show-search-results");
+}
+
+//reset search
+function resetSearch() {
+  document
+    .querySelectorAll(".search-results-filter")[0]
+    .classList.remove("show-children", "show-results");
+  suggestedFilters.classList.remove("hide");
+  searchBar.value = "";
+  searchWrap.classList.remove("show-reset-search");
 }
 
 //remove active from current item
@@ -34,9 +54,11 @@ function showChildren(e) {
   removeActiveClass();
   e.classList.add("active");
   e.parentNode.classList.add("active");
+  searchWrap.classList.add("show-reset-search");
 }
 
 // get related content on mouseover
+// for items that have a parent category/folder (app categories)
 var elList = document.querySelectorAll(
   "li.search-filter-category.top-level li"
 );
@@ -54,6 +76,7 @@ elList.forEach((el) =>
   )
 );
 
+// for normal items (apps)
 var elListSingleLevel = document.querySelectorAll(
   "li.search-filter-category:not(.top-level)"
 );
@@ -71,8 +94,6 @@ elListSingleLevel.forEach((el) =>
 );
 
 // search focus on keyboard press - cmd + K or ctrl + k
-var searchBar = document.getElementById("main-search");
-
 document.onkeydown = overrideKeyboardEvent;
 document.onkeyup = overrideKeyboardEvent;
 var keyIsDown = {};
@@ -99,7 +120,7 @@ function overrideKeyboardEvent(e) {
       // do key up stuff here for esc key
       if (e.keyCode === 27) {
         document.activeElement.blur();
-        searchWrap.classList.remove("show-search-results");
+        hideSearchResults();
         removeActiveClass();
         searchRightSection.innerHTML = "";
       }
@@ -117,8 +138,9 @@ function disabledEventPropagation(e) {
   }
 }
 
+// search close function on mobile
 function closeSearch() {
-  searchWrap.classList.remove("show-search-results");
+  hideSearchResults();
   document
     .querySelectorAll(".search-results-filter")[0]
     .classList.remove("show-children", "show-results");
@@ -126,9 +148,8 @@ function closeSearch() {
   searchBar.value = "";
   suggestedFilters.classList.remove("hide");
   searchRightSection.innerHTML = "";
+  searchWrap.classList.remove("show-reset-search");
 }
-
-var suggestedFilters = document.getElementById("suggestedFilters");
 
 // search box close on outside click
 if (searchWrap) {
@@ -137,10 +158,11 @@ if (searchWrap) {
 
     if (!isClickInside) {
       // the click was outside the searchResults
-      searchWrap.classList.remove("show-search-results");
+      hideSearchResults();
       document
         .querySelectorAll(".search-results-filter")[0]
         .classList.remove("show-children", "show-results");
+      searchWrap.classList.remove("show-reset-search");
       removeActiveClass();
       searchBar.value = "";
       suggestedFilters.classList.remove("hide");
@@ -149,19 +171,17 @@ if (searchWrap) {
   });
 }
 
+// dummysearch - showing dummy results & clearing it when input value is empty
 function dummySearch() {
   searchRightSection.innerHTML = "";
   if (searchBar.value === "") {
-    document
-      .querySelectorAll(".search-results-filter")[0]
-      .classList.remove("show-children", "show-results");
-
-    suggestedFilters.classList.remove("hide");
+    resetSearch();
   } else {
     document
       .querySelectorAll(".search-results-filter")[0]
       .classList.add("show-children", "show-results");
-
+    searchWrap.classList.add("show-reset-search");
+    document.body.classList.add("search-active");
     suggestedFilters.classList.add("hide");
   }
 }
