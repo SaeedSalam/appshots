@@ -26,6 +26,14 @@
     font-size: 18px;
     line-height: 1.3;
     color: #000000;
+    display: flex;
+    align-items: center;
+    img {
+      display: block;
+    }
+    span {
+      margin-left: 5px;
+    }
   }
 }
 .header-menu {
@@ -195,6 +203,9 @@
     }
     .header-logo a {
       color: #fff;
+      img {
+        filter: invert(1);
+      }
     }
     .header-user a {
       color: #fff;
