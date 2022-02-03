@@ -60,7 +60,9 @@ img { max-width: 100%; }
 .header-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; min-height: 53px; position: relative; }
 
 @media (min-width: 768px) { .header-logo { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; width: 27%; } }
-.header-logo a { text-decoration: none; font-weight: bold; font-size: 18px; line-height: 1.3; color: #000000; }
+.header-logo a { text-decoration: none; font-weight: bold; font-size: 18px; line-height: 1.3; color: #000000; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.header-logo a img { display: block; }
+.header-logo a span { margin-left: 5px; }
 
 @media (min-width: 768px) { .header-menu { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; text-align: center; } }
 .header-menu .menu-toggler { display: block; width: 20px; height: 20px; position: relative; cursor: pointer; }
@@ -97,6 +99,7 @@ img { max-width: 100%; }
 @media (max-width: 767px) { body.showNav { overflow: hidden; }
   body.showNav .header { background: #000; color: #fff; }
   body.showNav .header-logo a { color: #fff; }
+  body.showNav .header-logo a img { -webkit-filter: invert(1); filter: invert(1); }
   body.showNav .header-user a { color: #fff; }
   body.showNav .header-menu ul { display: block; position: fixed; top: 53px; left: 0; z-index: 99999; width: 100%; height: calc(100vh - 53px); padding: 15px; background: #000; overflow: auto; }
   body.showNav .header-menu ul li { display: block; margin: 20px 0; font-size: 34px; }
