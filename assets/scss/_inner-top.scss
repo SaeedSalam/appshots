@@ -67,6 +67,7 @@
       height: auto;
       width: 16px;
       object-fit: contain;
+      pointer-events: none;
     }
     @media (min-width: $sm) {
       &[data-tooltip]::before {
@@ -166,11 +167,15 @@
 }
 
 .screen-popup {
-  position: relative;
-  @media (min-width: $sm) {
-    height: 100vh;
-    overflow: hidden;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 999;
+  background: #f3f2ef;
   .container {
     padding: 15px;
     @media (min-width: $sm) {
@@ -212,8 +217,10 @@
     z-index: 1;
     margin: 0 0 30px;
     padding: 0 50px;
+    height: calc(100vh - 104px);
     @media (max-width: $xs) {
       padding: 0;
+      height: calc(100vh - 166px);
     }
     @media (min-width: $sm) {
       width: 100%;
@@ -255,5 +262,11 @@
   }
   .next-btn {
     right: 0;
+  }
+}
+body.showScreenPopup {
+  overflow: hidden;
+  .screen-popup {
+    display: block;
   }
 }

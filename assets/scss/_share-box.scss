@@ -4,8 +4,9 @@
   border-radius: 10px;
   position: absolute;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   bottom: calc(100% + 15px);
-  width: 100%;
   text-align: left;
   padding: 10px;
   font-weight: 600;
@@ -13,6 +14,8 @@
   font-size: 14px;
   z-index: 99;
   display: none;
+  width: 350px;
+  max-width: 100%;
   @media (min-width: $sm) {
     left: auto;
     bottom: auto;
