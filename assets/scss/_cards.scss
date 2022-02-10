@@ -13,6 +13,11 @@
     border-radius: 20px;
     text-decoration: none;
     color: #757575;
+    a {
+      text-decoration: none;
+      color: #757575;
+      display: block;
+    }
     &:last-child {
       margin: 0;
     }
@@ -67,9 +72,9 @@
   .card-head-plus {
     display: none;
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 2;
+    right: 20px;
+    top: 30px;
     width: 36px;
     height: 36px;
     background: #e1e0db;
@@ -103,6 +108,9 @@
       &[data-tooltip]:hover::before {
         opacity: 1;
       }
+    }
+    img {
+      pointer-events: none;
     }
   }
   .card-title {

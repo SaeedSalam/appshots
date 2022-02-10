@@ -84,6 +84,8 @@
     display: block;
     border-radius: 11px;
     cursor: zoom-in;
+    width: 100%;
+    background: #f0efea;
     img {
       display: block;
       width: 100%;
@@ -139,6 +141,7 @@
         text-overflow: ellipsis;
         @media (min-width: $xs) {
           font-size: 14px;
+          max-width: 98px;
         }
         a {
           color: #fff;
