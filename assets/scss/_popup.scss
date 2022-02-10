@@ -1,0 +1,116 @@
+.aps-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  display: none;
+  &.aps-show {
+    display: block !important;
+  }
+  .aps-popup-wrap {
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    padding: 3.5% 0;
+  }
+  .aps-popup-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover {
+      background: #ddd;
+    }
+  }
+  .aps-popup-content {
+    position: relative;
+    padding: 70px;
+    background: #f3f2ef;
+    border-radius: 21px;
+    max-width: 590px;
+    width: 100%;
+    margin: 0 auto;
+    h3 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 1.2;
+      color: #000000;
+      margin: 0 0 30px;
+    }
+    p {
+      margin: 0 0 20px;
+    }
+  }
+  .aps-form-item {
+    margin: 0 0 24px;
+    position: relative;
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #292929;
+      margin: 0 0 10px;
+    }
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #e8e7e5;
+      padding: 15px;
+      border-radius: 9px;
+      &:focus {
+        border-color: #666;
+        outline: none;
+      }
+    }
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+  }
+  .aps-btn {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1.6px solid #c4c4c4;
+    border-radius: 80px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    color: #757575;
+    padding: 12px 24px;
+    outline: none;
+    &.aps-btn-transparent {
+      background: transparent;
+    }
+    &.aps-btn-dark {
+      background: #000;
+      color: #fff;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .aps-btn + .aps-btn {
+    margin-left: 20px;
+  }
+}

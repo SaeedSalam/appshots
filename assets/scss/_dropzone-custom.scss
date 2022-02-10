@@ -1,0 +1,102 @@
+.dz-success-mark,
+.dz-error-mark {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+.dz-success-mark svg,
+.dz-error-mark svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.dz-success-mark {
+  background: green;
+}
+.dz-error-mark {
+  background: red;
+}
+
+.dz-error-message {
+  color: #f14444;
+  border: 1px solid #f00;
+  padding: 5px;
+  display: block;
+  width: max-content;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.dz-default.dz-message {
+  width: 100%;
+}
+
+.dz-preview {
+  display: inline-block;
+  margin-right: 20px;
+  max-width: 25%;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.images-section {
+  button.dz-button {
+    width: 100%;
+    border: 1px dashed #a8a5a5;
+    background: #e1e0db;
+    padding: 30px;
+    border-radius: 30px;
+    min-height: 100px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #757575;
+    cursor: pointer;
+    img {
+      display: block;
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+.inner-app-details {
+  button.dz-button {
+    width: 172px;
+    height: 172px;
+    background: #e1e0db;
+    border: 1px dashed #a8a5a5;
+    cursor: pointer;
+    border-radius: 30px;
+    img {
+      margin: 0 auto;
+    }
+  }
+  .dz-preview {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+  }
+
+  form#thumb-image {
+    position: relative;
+    width: 172px;
+    height: 172px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .dz-started button {
+    color: transparent;
+  }
+}
