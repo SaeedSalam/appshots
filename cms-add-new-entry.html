@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add New - AppShots CMS</title>
+    <meta name="Description" content="AppShots - description here" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/dropzone.css" /> -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- adding following line to noindex the github page -->
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container">
+        <div class="header-wrap">
+          <div class="header-menu">
+            <div class="menu-toggler" onclick="menuToggle(event)">
+              <img class="bars" src="assets/images/menu.svg" alt="" />
+              <img class="close" src="assets/images/menu-close.svg" alt="" />
+            </div>
+            <ul>
+              <li class="active"><a href="#">Browse</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <div class="header-logo">
+            <h2>
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.svg"
+                  alt="appshots"
+                  width="20"
+                  height="20"
+                />
+                <span>Appshots</span>
+              </a>
+            </h2>
+          </div>
+          <div class="header-user">
+            <a class="user-button create-btn" href="cms-add-new-entry.html"
+              >Create New</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END header -->
+
+    <div class="inner-top-section">
+      <div class="container">
+        <div class="inner-top-wrap">
+          <a href="#" class="back-btn rounded-btn">
+            <img src="assets/images/arrow-prev.svg" alt="" />
+          </a>
+          <div class="inner-app-details">
+            <form action="/" class="dropzone" id="thumb-image"></form>
+            <!-- <div class="app-logo app-ios-logo">
+              <img
+                src="assets/images/app-icon-big.png"
+                width="172"
+                height="172"
+                alt="logo"
+              />
+            </div> -->
+            <!-- <div class="app-logo app-android-logo">
+                        <img src="assets/images/app-icon-big.png" width="172" height="172" alt="logo" />
+                    </div> -->
+            <h1 class="editable-parent">
+              <span class="editable-item" title="click to edit"
+                >Input Name</span
+              >
+            </h1>
+            <div class="app-desc editable-parent">
+              <span class="editable-item" title="click to edit"
+                >Input Short Description</span
+              >
+            </div>
+            <div class="app-owner editable-parent">
+              <span class="editable-item" title="click to edit"
+                >Input Copyright</span
+              >
+            </div>
+          </div>
+          <div class="right-buttons">
+            <button type="button" class="rounded-btn" data-tooltip="save">
+              <img src="assets/images/save.svg" alt="save" />
+            </button>
+            <button
+              type="button"
+              class="rounded-btn"
+              data-tooltip="Delete"
+              data-popup="popup-delete-confirm"
+              onclick="openPopup(event)"
+            >
+              <img src="assets/images/delete.svg" alt="delete" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="links-wrap">
+      <div class="container">
+        <h4>App Download Links</h4>
+        <div class="links-item">
+          <label>Playstore Link</label>
+          <input
+            type="text"
+            value=""
+            name="playstore_link"
+            placeholder="Enter Link to Playstore"
+          />
+        </div>
+        <div class="links-item">
+          <label>Appstore Link</label>
+          <input
+            type="text"
+            value=""
+            name="appstore_link"
+            placeholder="Enter Link to Appstore"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories-wrap cms-cats">
+      <div class="container">
+        <div class="categories-text">
+          <span class="cat-text">Categories</span>
+        </div>
+        <div class="categories-item-wrap">
+          <div class="categories-item">Onboarding</div>
+
+          <div class="categories-item">Home</div>
+
+          <div class="categories-item">Breathe</div>
+
+          <div class="categories-item">Meditate</div>
+
+          <div class="categories-item">Move</div>
+
+          <div class="categories-item">Lifestyle</div>
+
+          <div class="categories-item">Medical</div>
+
+          <div class="categories-item">Music</div>
+
+          <div class="categories-item">Navigation</div>
+
+          <div class="categories-item">Other</div>
+
+          <div class="categories-item">Live</div>
+
+          <div class="categories-item">Lorem Iplsum</div>
+
+          <div class="categories-item">Dolor Sit</div>
+
+          <div class="categories-item">Amet Parso</div>
+        </div>
+        <div
+          class="categories-add-new"
+          title="Add a new category"
+          data-popup="popup-new-category"
+          onclick="openPopup(event)"
+        >
+          + Add New
+        </div>
+      </div>
+    </div>
+    <!-- END Categories -->
+
+    <!-- iOS / Android Tab -->
+    <div class="os-tab os-tab-cms">
+      <div class="container">
+        <!-- just changing the classes here now, do set a state for this span click, and change the content respectively  -->
+        <span class="active" onclick="cmsTabToggle()">iOS</span>
+        <span onclick="cmsTabToggle()">Android</span>
+      </div>
+    </div>
+    <!-- END iOS / Android Tab -->
+
+    <!-- sortable items-->
+    <div class="images-section">
+      <div class="container">
+        <div class="ios-section cms-tab cms-tab-active">
+          <div id="ios-image-items" class="image-items-wrap">
+            <form action="/" class="dropzone" id="ios-screens"></form>
+            <div class="image-item">
+              <img src="assets/images/screen1-3.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen1-2.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen2-3.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen2-3.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen1-2.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen2-3.png" alt="image" />
+            </div>
+          </div>
+        </div>
+        <div class="android-section cms-tab">
+          <div id="android-image-items" class="image-items-wrap">
+            <form action="/" class="dropzone" id="android-screens"></form>
+            <div class="image-item">
+              <img src="assets/images/screen2-3.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen1-2.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen2-3.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen1-3.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen1-2.png" alt="image" />
+            </div>
+            <div class="image-item">
+              <img src="assets/images/screen2-3.png" alt="image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END sortable items-->
+
+    <!-- Delete Confirmation -->
+    <div class="aps-popup" id="popup-delete-confirm" style="display: none">
+      <div class="aps-popup-wrap">
+        <div class="aps-popup-content">
+          <div class="aps-popup-close aps-close" onclick="closePopup(event)">
+            X
+          </div>
+          <h3>Are you sure?</h3>
+          <p>
+            This cannot be reversed. Click <strong>Cancel</strong> to go back.
+          </p>
+          <div class="aps-form-wrap">
+            <form>
+              <div class="aps-form-actions">
+                <button type="submit" class="aps-btn aps-btn-transparent">
+                  Yes! Delete This.
+                </button>
+                <button
+                  type="button"
+                  class="aps-btn aps-btn-dark aps-close"
+                  onclick="closePopup(event)"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Delete Confirmation -->
+
+    <!-- Add New Category Popup -->
+    <div class="aps-popup" id="popup-new-category" style="display: none">
+      <div class="aps-popup-wrap">
+        <div class="aps-popup-content">
+          <div class="aps-popup-close aps-close" onclick="closePopup(event)">
+            X
+          </div>
+          <h3>Add new category</h3>
+          <div class="aps-form-wrap">
+            <form>
+              <div class="aps-form-item">
+                <label>Name</label>
+                <input
+                  required
+                  type="text"
+                  name="ip"
+                  value=""
+                  required
+                  placeholder="category name"
+                />
+              </div>
+              <div class="aps-form-actions">
+                <button type="submit" class="aps-btn aps-btn-dark">Save</button>
+                <button
+                  type="button"
+                  class="aps-btn aps-btn-transparent aps-close"
+                  onclick="closePopup()"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Add New Category Popup -->
+
+    <!-- sortable script -->
+    <script src="assets/js/sortable.min.js"></script>
+    <script>
+      var androidItems = document.getElementById("android-image-items");
+      var iosItems = document.getElementById("ios-image-items");
+      var sortableIos = new Sortable(iosItems, {
+        draggable: ".image-item",
+        animation: 150,
+        easing: "cubic-bezier(1, 0, 0, 1)",
+      });
+
+      var sortableAndroid = new Sortable(androidItems, {
+        // sort: true, // sorting inside list
+        // disabled: false, // Disables the sortable if set to true.
+        store: null, // @see Store
+        animation: 150, // ms, animation speed moving items when sorting, `0` — without animation
+        easing: "cubic-bezier(1, 0, 0, 1)", // Easing for animation. Defaults to null. See https://easings.net/ for examples.
+        draggable: ".image-item", // Specifies which items inside the element should be draggable
+
+        // dataIdAttr: "data-id", // HTML attribute that is used by the `toArray()` method
+
+        // kindly refer https://github.com/SortableJS/Sortable for full options
+      });
+    </script>
+    <!-- END sortable script -->
+
+    <!-- Editable content script -->
+    <script>
+      var editableItems = document.getElementsByClassName("editable-item");
+      for (var i = 0; i < editableItems.length; i++) {
+        editableItems[i].contentEditable = true;
+      }
+    </script>
+    <!-- END Editable content script -->
+
+    <!-- categories script-->
+    <script>
+      var catItem = document.getElementsByClassName("categories-item");
+      for (var i = 0; i < catItem.length; i++) {
+        catItem[i].addEventListener("click", function (event) {
+          event.target.classList.toggle("active");
+        });
+      }
+    </script>
+    <!-- END categories script-->
+
+    <!-- upload file script -->
+    <script src="assets/js/dropzone.min.js"></script>
+    <script>
+      // Note that the name "myDropzone" is the camelized
+      // id of the form.
+      Dropzone.options.thumbImage = {
+        // Configuration options go here
+        dictDefaultMessage:
+          "<img src='assets/images/upload.svg' alt='upload' />",
+        maxFiles: 1,
+        init: function () {
+          this.on("maxfilesexceeded", function (file) {
+            this.removeAllFiles();
+            this.addFile(file);
+          });
+          this.on("addedfile", (file) => {
+            console.log("A file has been added");
+          });
+        },
+      };
+
+      Dropzone.options.iosScreens = {
+        // Configuration options go here
+        dictDefaultMessage:
+          "<img src='assets/images/upload.svg' alt='upload' /> Upload or drag and drop screenshots for iOS",
+        init: function () {
+          this.on("addedfile", (file) => {
+            console.log("A file has been added");
+          });
+        },
+      };
+      Dropzone.options.androidScreens = {
+        // Configuration options go here
+        dictDefaultMessage:
+          "<img src='assets/images/upload.svg' alt='upload' /> Upload or drag and drop screenshots for Android",
+        init: function () {
+          this.on("addedfile", (file) => {
+            console.log("A file has been added");
+          });
+        },
+      };
+    </script>
+    <!-- END upload file script -->
+
+    <!-- CMS OS Tab -->
+    <script src="assets/js/cms-os-tab.js"></script>
+    <!-- END CMS OS Tab -->
+
+    <!-- popup scripts -->
+    <script src="assets/js/aps-popup.js"></script>
+    <!-- END popup script -->
+  </body>
+</html>
