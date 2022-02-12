@@ -1,4 +1,5 @@
 function openPopup(e) {
+  e.preventDefault();
   var popupId = e.target.dataset.popup;
   document.getElementById(popupId).classList.add("aps-show");
   document.body.classList.add("aps-popup-showing");
