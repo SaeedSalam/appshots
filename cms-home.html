@@ -475,7 +475,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="#"
+                        data-popup="popup-delete-confirm"
+                        onclick="openPopup(event)"
+                      >
                         <img
                           src="assets/images/delete-icon.svg"
                           alt="Delete this app"
@@ -533,7 +537,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="#"
+                        data-popup="popup-delete-confirm"
+                        onclick="openPopup(event)"
+                      >
                         <img
                           src="assets/images/delete-icon.svg"
                           alt="Delete this app"
@@ -591,7 +599,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="#"
+                        data-popup="popup-delete-confirm"
+                        onclick="openPopup(event)"
+                      >
                         <img
                           src="assets/images/delete-icon.svg"
                           alt="Delete this app"
@@ -1080,7 +1092,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="#"
+                        data-popup="popup-delete-confirm"
+                        onclick="openPopup(event)"
+                      >
                         <img
                           src="assets/images/delete-icon.svg"
                           alt="Delete this app"
@@ -1139,7 +1155,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="#"
+                        data-popup="popup-delete-confirm"
+                        onclick="openPopup(event)"
+                      >
                         <img
                           src="assets/images/delete-icon.svg"
                           alt="Delete this app"
@@ -1198,7 +1218,11 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="#"
+                        data-popup="popup-delete-confirm"
+                        onclick="openPopup(event)"
+                      >
                         <img
                           src="assets/images/delete-icon.svg"
                           alt="Delete this app"
@@ -1776,6 +1800,38 @@
       </div>
     </div>
     <!-- END Collections Popup -->
+
+    <!-- Delete Confirmation -->
+    <div class="aps-popup" id="popup-delete-confirm" style="display: none">
+      <div class="aps-popup-wrap">
+        <div class="aps-popup-content">
+          <div class="aps-popup-close aps-close" onclick="closePopup(event)">
+            X
+          </div>
+          <h3>Are you sure?</h3>
+          <p>
+            This cannot be reversed. Click <strong>Cancel</strong> to go back.
+          </p>
+          <div class="aps-form-wrap">
+            <form>
+              <div class="aps-form-actions">
+                <button type="submit" class="aps-btn aps-btn-transparent">
+                  Yes! Delete This.
+                </button>
+                <button
+                  type="button"
+                  class="aps-btn aps-btn-dark aps-close"
+                  onclick="closePopup(event)"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Delete Confirmation -->
 
     <!-- Header Javascript -->
     <script src="assets/js/header.js"></script>

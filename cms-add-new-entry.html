@@ -71,25 +71,40 @@
                         <img src="assets/images/app-icon-big.png" width="172" height="172" alt="logo" />
                     </div> -->
             <h1 class="editable-parent">
-              <span class="editable-item" title="click to edit"
-                >Input Name</span
-              >
+              <span
+                class="editable-item"
+                title="click to edit"
+                data-placeholder="Input Name"
+              ></span>
             </h1>
             <div class="app-desc editable-parent">
-              <span class="editable-item" title="click to edit"
-                >Input Short Description</span
-              >
+              <span
+                class="editable-item"
+                title="click to edit"
+                data-placeholder="Input Short Description"
+              ></span>
             </div>
             <div class="app-owner editable-parent">
-              <span class="editable-item" title="click to edit"
-                >Input Copyright</span
-              >
+              &copy;
+              <span
+                class="editable-item"
+                title="click to edit"
+                data-placeholder="Input Copyright"
+              ></span>
             </div>
           </div>
           <div class="right-buttons">
-            <button type="button" class="rounded-btn" data-tooltip="save">
+            <button
+              type="button"
+              class="rounded-btn save-btn"
+              data-tooltip="save"
+              onclick="saveClick()"
+            >
               <img src="assets/images/save.svg" alt="save" />
             </button>
+            <!-- save toaster -->
+            <div class="aps-toaster">Changes Saved Successfully</div>
+            <!-- END save toaster -->
             <button
               type="button"
               class="rounded-btn"
@@ -106,24 +121,30 @@
 
     <div class="links-wrap">
       <div class="container">
-        <h4>App Download Links</h4>
-        <div class="links-item">
-          <label>Playstore Link</label>
-          <input
-            type="text"
-            value=""
-            name="playstore_link"
-            placeholder="Enter Link to Playstore"
-          />
-        </div>
-        <div class="links-item">
-          <label>Appstore Link</label>
-          <input
-            type="text"
-            value=""
-            name="appstore_link"
-            placeholder="Enter Link to Appstore"
-          />
+        <h4>Appstore Link</h4>
+        <div class="links-item-wrap">
+          <div class="links-item">
+            <div class="links-item-icon ios-link">
+              <img src="assets/images/icon-appstore.svg" alt="" />
+            </div>
+            <input
+              type="text"
+              value=""
+              name="appstore_link"
+              placeholder="Enter Link to Appstore"
+            />
+          </div>
+          <div class="links-item">
+            <div class="links-item-icon">
+              <img src="assets/images/icon-playstore.svg" alt="" />
+            </div>
+            <input
+              type="text"
+              value=""
+              name="playstore_link"
+              placeholder="Enter Link to Playstore"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -193,21 +214,27 @@
             <form action="/" class="dropzone" id="ios-screens"></form>
             <div class="image-item">
               <img src="assets/images/screen1-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen1-2.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen1-2.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
           </div>
         </div>
@@ -216,21 +243,27 @@
             <form action="/" class="dropzone" id="android-screens"></form>
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen1-2.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen1-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen1-2.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
+              <div class="remove-item" title="remove"></div>
             </div>
           </div>
         </div>
@@ -296,7 +329,7 @@
                 <button
                   type="button"
                   class="aps-btn aps-btn-transparent aps-close"
-                  onclick="closePopup()"
+                  onclick="closePopup(event)"
                 >
                   Cancel
                 </button>
@@ -364,6 +397,14 @@
         dictDefaultMessage:
           "<img src='assets/images/upload.svg' alt='upload' />",
         maxFiles: 1,
+        thumbnailWidth: 172,
+        thumbnailHeight: 172,
+        addRemoveLinks: true,
+        dictRemoveFile:
+          "<img src='assets/images/delete.svg' alt='delete' title='remove' />",
+        keepLocal: true,
+        acceptedFiles: "image/*",
+        autoProcessQueue: false,
         init: function () {
           this.on("maxfilesexceeded", function (file) {
             this.removeAllFiles();
@@ -379,6 +420,14 @@
         // Configuration options go here
         dictDefaultMessage:
           "<img src='assets/images/upload.svg' alt='upload' /> Upload or drag and drop screenshots for iOS",
+        thumbnailWidth: 192,
+        thumbnailHeight: 416,
+        addRemoveLinks: true,
+        dictRemoveFile:
+          "<img src='assets/images/delete.svg' alt='delete' title='remove' />",
+        keepLocal: true,
+        acceptedFiles: "image/*",
+        autoProcessQueue: false,
         init: function () {
           this.on("addedfile", (file) => {
             console.log("A file has been added");
@@ -389,6 +438,14 @@
         // Configuration options go here
         dictDefaultMessage:
           "<img src='assets/images/upload.svg' alt='upload' /> Upload or drag and drop screenshots for Android",
+        thumbnailWidth: 192,
+        thumbnailHeight: 416,
+        addRemoveLinks: true,
+        dictRemoveFile:
+          "<img src='assets/images/delete.svg' alt='delete' title='remove' />",
+        keepLocal: true,
+        acceptedFiles: "image/*",
+        autoProcessQueue: false,
         init: function () {
           this.on("addedfile", (file) => {
             console.log("A file has been added");
@@ -398,6 +455,10 @@
     </script>
     <!-- END upload file script -->
 
+    <!-- Header Javascript -->
+    <script src="assets/js/header.js"></script>
+    <!-- END Header Javascript -->
+
     <!-- CMS OS Tab -->
     <script src="assets/js/cms-os-tab.js"></script>
     <!-- END CMS OS Tab -->
@@ -405,5 +466,18 @@
     <!-- popup scripts -->
     <script src="assets/js/aps-popup.js"></script>
     <!-- END popup script -->
+
+    <!-- save button click -->
+    <script>
+      function saveClick() {
+        // dummy function to show toast
+        var toasterItem = document.querySelectorAll(".aps-toaster")[0];
+        toasterItem.classList.add("show-toaster");
+        setTimeout(function () {
+          toasterItem.classList.remove("show-toaster");
+        }, 2000);
+      }
+    </script>
+    <!-- END save button click -->
   </body>
 </html>
