@@ -42,15 +42,22 @@
     }
   }
   .card-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
+    margin-left: -8px;
+    margin-right: -8px;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
     .card-content-item {
-      width: calc(33.33% - 8px);
+      width: calc(33.33% - 16px);
+      margin: 0 8px;
       border-radius: 11px;
       overflow: hidden;
       border: 1px solid #eee;
       position: relative;
+      float: left;
       img {
         display: block;
         width: 100%;
