@@ -71,6 +71,10 @@
   .card-logo {
     width: 60px;
     height: 60px;
+    background: #f0efea;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
     img {
       display: block;
       height: 60px;
@@ -208,6 +212,7 @@
 }
 
 .tab-android .card-logo {
+  border-radius: 50px;
   img {
     border-radius: 50px;
   }
@@ -250,7 +255,6 @@
   .card-title-top,
   .card-title-bottom,
   .card-head-plus {
-    // background: linear-gradient(90deg, #f0efea 0%, #f3f3ef 100%);
     background: #f0efea;
     background-image: linear-gradient(
       to right,
