@@ -225,73 +225,30 @@
   }
 }
 
-// card shimmer
-.card-box-shimmer {
-  background: #fff;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 99;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  .card-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-  .card-title-top {
-    width: 57px;
-    height: 25px;
-  }
-  .card-title-bottom {
-    width: 195px;
-    height: 13px;
-  }
-
-  .card-content-item {
-    aspect-ratio: 0.4615;
-  }
-  .card-head-plus {
-    width: 36px;
-    height: 36px;
-    top: 10px;
-    right: 10px;
-  }
-  .card-logo,
-  .card-content-item,
-  .card-title-top,
-  .card-title-bottom,
-  .card-head-plus {
-    background: #f0efea;
-    background-image: linear-gradient(
-      to right,
-      #f0efea 0%,
-      #f3f3ef 20%,
-      #f0efea 40%,
-      #f3f3ef 100%
-    );
-    background-repeat: no-repeat;
-    background-size: 200px 400px;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 20;
-    animation-name: effectShimmer;
-    animation-timing-function: linear;
-  }
-}
-
-@keyframes effectShimmer {
-  0% {
-    background-position: -200px 0;
-  }
-
-  100% {
-    background-position: 200px 0;
-  }
-}
-
-body.loaded {
-  .card-box-shimmer {
-    display: none !important;
+.cards-wrap .card-content .card-content-item {
+  aspect-ratio: 0.461538462;
+  background: #f0efea;
+  background-image: linear-gradient(
+    to right,
+    #f0efea 0%,
+    #f3f3ef 20%,
+    #f0efea 40%,
+    #f3f3ef 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200px 400px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 10;
+  animation-name: effectShimmer;
+  animation-timing-function: linear;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
   }
 }
