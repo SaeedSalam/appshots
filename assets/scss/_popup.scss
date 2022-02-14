@@ -13,9 +13,13 @@
   }
   .aps-popup-wrap {
     position: relative;
-    height: 100vh;
     overflow: auto;
     padding: 3.5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
   }
   .aps-popup-close {
     position: absolute;
@@ -86,10 +90,13 @@
     label {
       display: block;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.2;
       color: #292929;
       margin: 0 0 10px;
+      @media (min-width: $sm) {
+        font-size: 16px;
+      }
     }
     input,
     textarea {
@@ -140,9 +147,9 @@
     }
   }
   .aps-btn + .aps-btn {
-    margin-left: 20px;
+    margin-left: 10px;
     @media (min-width: $sm) {
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 }

@@ -130,6 +130,9 @@ a.dz-remove {
     border-radius: 30px;
     overflow: hidden;
     pointer-events: auto;
+    &.dz-complete {
+      display: none;
+    }
   }
 
   form#thumb-image {
