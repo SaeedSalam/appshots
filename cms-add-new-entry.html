@@ -102,9 +102,6 @@
             >
               <img src="assets/images/save.svg" alt="save" />
             </button>
-            <!-- save toaster -->
-            <div class="aps-toaster">Changes Saved Successfully</div>
-            <!-- END save toaster -->
             <button
               type="button"
               class="rounded-btn"
@@ -211,8 +208,30 @@
       <div class="container">
         <div class="ios-section cms-tab cms-tab-active">
           <div id="ios-image-items" class="image-items-wrap">
-            <form action="/" class="dropzone" id="ios-screens"></form>
-            <div class="image-item">
+            <form
+              action="upload-ios.php"
+              class="dropzone"
+              id="ios-screens"
+              method="post"
+              enctype="multipart/form-data"
+            ></form>
+            <div class="dropzone-buttons">
+              <button
+                type="button"
+                class="dropzone-btn upload-btn"
+                id="uploadIosImages"
+              >
+                Upload
+              </button>
+              <button
+                type="button"
+                class="dropzone-btn cancel-btn"
+                id="cancelIosImages"
+              >
+                Cancel
+              </button>
+            </div>
+            <!-- <div class="image-item">
               <img src="assets/images/screen1-3.png" alt="image" />
               <div class="remove-item" title="remove"></div>
             </div>
@@ -235,13 +254,35 @@
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
               <div class="remove-item" title="remove"></div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="android-section cms-tab">
           <div id="android-image-items" class="image-items-wrap">
-            <form action="/" class="dropzone" id="android-screens"></form>
-            <div class="image-item">
+            <form
+              action="upload-android.php"
+              class="dropzone"
+              id="android-screens"
+              method="post"
+              enctype="multipart/form-data"
+            ></form>
+            <div class="dropzone-buttons">
+              <button
+                type="button"
+                class="dropzone-btn upload-btn"
+                id="uploadAndroidImages"
+              >
+                Upload
+              </button>
+              <button
+                type="button"
+                class="dropzone-btn cancel-btn"
+                id="cancelAndroidImages"
+              >
+                Cancel
+              </button>
+            </div>
+            <!-- <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
               <div class="remove-item" title="remove"></div>
             </div>
@@ -264,7 +305,7 @@
             <div class="image-item">
               <img src="assets/images/screen2-3.png" alt="image" />
               <div class="remove-item" title="remove"></div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -428,10 +469,24 @@
         keepLocal: true,
         acceptedFiles: "image/*",
         autoProcessQueue: false,
+        parallelUploads: 10,
+        maxFiles: 10,
         init: function () {
-          this.on("addedfile", (file) => {
-            console.log("A file has been added");
-          });
+          var iosDropzone = this;
+          // trigger upload
+          document.getElementById("uploadIosImages").onclick = function (e) {
+            e.preventDefault();
+            iosDropzone.processQueue();
+          };
+          document.getElementById("cancelIosImages").onclick = function (e) {
+            e.preventDefault();
+            iosDropzone.removeAllFiles();
+          };
+        },
+        success: function (file, response) {
+          file.previewElement.innerHTML = "";
+          uploadSuccess();
+          console.log(this.getAcceptedFiles());
         },
       };
       Dropzone.options.androidScreens = {
@@ -446,10 +501,29 @@
         keepLocal: true,
         acceptedFiles: "image/*",
         autoProcessQueue: false,
+        parallelUploads: 10,
+        maxFiles: 10,
         init: function () {
-          this.on("addedfile", (file) => {
-            console.log("A file has been added");
-          });
+          var androidDropzone = this;
+
+          // trigger upload
+          document.getElementById("uploadAndroidImages").onclick = function (
+            e
+          ) {
+            e.preventDefault();
+            androidDropzone.processQueue();
+          };
+          document.getElementById("cancelAndroidImages").onclick = function (
+            e
+          ) {
+            e.preventDefault();
+            androidDropzone.removeAllFiles();
+          };
+        },
+        success: function (file, response) {
+          file.previewElement.innerHTML = "";
+          uploadSuccess();
+          console.log(this.getAcceptedFiles(File));
         },
       };
     </script>
@@ -469,13 +543,25 @@
 
     <!-- save button click -->
     <script>
+      function createToaster() {
+        const toasterItem = document.createElement("div");
+        toasterItem.classList.add("aps-toaster", "show-toaster");
+        document.body.appendChild(toasterItem);
+        toasterItem.innerText = "";
+        setTimeout(function () {
+          toasterItem.parentNode.removeChild(toasterItem);
+        }, 2000);
+      }
       function saveClick() {
         // dummy function to show toast
-        var toasterItem = document.querySelectorAll(".aps-toaster")[0];
-        toasterItem.classList.add("show-toaster");
-        setTimeout(function () {
-          toasterItem.classList.remove("show-toaster");
-        }, 2000);
+        createToaster();
+        document.querySelectorAll(".aps-toaster")[0].innerText =
+          "Changes Saved Successfully";
+      }
+      function uploadSuccess() {
+        createToaster();
+        document.querySelectorAll(".aps-toaster")[0].innerText =
+          "Images Uploaded Successfully";
       }
     </script>
     <!-- END save button click -->
