@@ -101,7 +101,7 @@
     &::before {
       content: "";
       display: block;
-      width: 100%;
+      width: calc(50% - 30px);
       height: 1px;
       background: #c4c4c4;
       position: absolute;
@@ -110,11 +110,21 @@
       transform: translateY(-50%);
       z-index: 1;
     }
+    &::after {
+      content: "";
+      display: block;
+      width: calc(50% - 30px);
+      height: 1px;
+      background: #c4c4c4;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
     span {
       position: relative;
       z-index: 2;
-      padding: 0 25px;
-      background: #f3f2ef;
     }
   }
   .email-ip {

@@ -151,6 +151,7 @@ body {
   background: #f3f2ef;
   font-size: 16px;
   line-height: 1.2;
+  position: relative;
 }
 
 .container {
@@ -203,4 +204,32 @@ img {
 
 strong {
   font-weight: bold;
+}
+
+.btn {
+  background: #000000;
+  border-radius: 9px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  @media (min-width: $sm) {
+    font-size: 16px;
+  }
+  @media (min-width: $md) {
+    font-size: 18px;
+  }
+  @media (min-width: $lg) {
+    font-size: 20px;
+  }
+  &:hover {
+    background: #222;
+  }
 }
