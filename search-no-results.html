@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Search No Results page - AppShots</title>
+    <meta name="Description" content="AppShots - description here" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- adding following line to noindex the github page -->
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container">
+        <div class="header-wrap">
+          <div class="header-menu">
+            <div class="menu-toggler" onclick="menuToggle(event)">
+              <img class="bars" src="assets/images/menu.svg" alt="" />
+              <img class="close" src="assets/images/menu-close.svg" alt="" />
+            </div>
+            <ul>
+              <li class="active"><a href="#">Browse</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <div class="header-logo">
+            <h2>
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.svg"
+                  alt="appshots"
+                  width="20"
+                  height="20"
+                />
+                <span>Appshots</span>
+              </a>
+            </h2>
+          </div>
+          <div class="header-user">
+            <a class="user-button" href="#">Feedbacks</a>
+            <!-- <a class="user-login" href="#" onclick="loginPopupToggle(event)">Login</a> -->
+            <div class="user-dropdown">
+              <a
+                href="#"
+                onclick="userDropdownToggle(event)"
+                class="user-toggler"
+              >
+                <img src="assets/images/user.png" alt="" />
+              </a>
+              <div class="dropdown-box">
+                <div class="dropdown-info">
+                  <img src="assets/images/user.png" alt="" />
+                  <div class="user-details">
+                    <h5>John Hopkins</h5>
+                    <p>johnhopkins@gmail.com</p>
+                  </div>
+                </div>
+                <ul>
+                  <li><a href="#">Manage Memberships</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Help &amp; Support</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END header -->
+
+    <div class="inner-top-section">
+      <div class="container">
+        <div class="inner-top-wrap">
+          <a href="#" class="back-btn rounded-btn">
+            <img src="assets/images/arrow-prev.svg" alt="" />
+          </a>
+          <!-- iOS / Android Tab -->
+          <div class="os-tab">
+            <!-- just changing the classes here now, do set a state for this span click, and change the content respectively  -->
+            <span onClick="osTabToggle()" class="active">iOS</span>
+            <span onClick="osTabToggle()">Android</span>
+          </div>
+          <!-- END iOS / Android Tab -->
+          <div class="inner-app-details">
+            <div class="app-logo app-ios-logo">
+              <img
+                src="assets/images/app-icon-big.png"
+                width="172"
+                height="172"
+                alt="logo"
+              />
+            </div>
+            <!-- <div class="app-logo app-android-logo">
+                        <img src="assets/images/app-icon-big.png" width="172" height="172" alt="logo" />
+                    </div> -->
+            <h1>Open</h1>
+            <div class="app-desc">Breathwork, meditation, yoga</div>
+            <div class="app-owner">&copy; 2021 Open</div>
+          </div>
+          <div class="right-buttons">
+            <div class="rounded-btn" data-tooltip="Save to collection">
+              <img src="assets/images/plus.svg" alt="save" />
+            </div>
+            <button
+              type="button"
+              class="rounded-btn"
+              data-tooltip="Share"
+              onclick="shareBoxToggle(event)"
+            >
+              <img src="assets/images/share.svg" alt="share" />
+            </button>
+            <div class="share-box">
+              <h4>Share this app</h4>
+              <div class="share-url-box">
+                <div class="share-copied">Copied to Clipboard</div>
+                <div class="share-url">
+                  https://appshots.design/apps/open-android-app-dummy-share-url-XSADWC65754674
+                </div>
+                <div class="share-copy" onclick="copyLink()">
+                  <img src="assets/images/share-copy.svg" alt="copy" />
+                </div>
+              </div>
+              <div class="share-others">
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-fb.svg" alt="facebook" />
+                  <span>Facebook</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-tw.svg" alt="twitter" />
+                  <span>Twitter</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-email.svg" alt="email" />
+                  <span>Email</span>
+                </button>
+              </div>
+            </div>
+            <a href="#" class="rounded-btn" data-tooltip="View on App Store"
+              ><img src="assets/images/appstore.svg" alt="download"
+            /></a>
+            <!-- <a href="#" class="rounded-btn" data-tooltip="View on Play Store"><img
+                                src="assets/images/playstore.svg" alt="download" /></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- search wrap-->
+    <div class="image-type-search-wrap">
+      <div class="container">
+        <div class="search-wrap">
+          <div class="search-box">
+            <div class="reset-search" onclick="resetSearch()">
+              <img src="assets/images/menu-back.svg" alt="reset" />
+            </div>
+            <div class="search-mobile-close" onclick="closeSearch()">
+              <img src="assets/images/close-small.svg" alt="" />
+            </div>
+            <input
+              id="main-search"
+              type="search"
+              name="search"
+              value=""
+              placeholder="Search apps (Eg: Spotify)"
+              onfocus="showSearchResults()"
+              oninput="dummySearch()"
+            />
+            <div class="keyboard-nav" id="keysearch">
+              <span class="mac-icon"
+                ><img src="assets/images/cmd.svg" alt="search"
+              /></span>
+              <span class="nonmac-icon">Ctrl</span>
+              <span>K</span>
+            </div>
+          </div>
+          <div class="search-results">
+            <div class="search-results-filter">
+              <div class="search-results-wrap">
+                <div class="search-no-results">
+                  <img
+                    src="assets/images/search-big.svg"
+                    alt="search"
+                    width="60"
+                    height="60"
+                  />
+                  <div class="search-no-results-title">
+                    No search results found.
+                  </div>
+                  <p>
+                    Couldn't find a filter option or an app name that matches
+                    "meme"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END search results -->
+        </div>
+      </div>
+    </div>
+    <!-- END search wrap-->
+
+    <!-- Categories -->
+    <div class="categories-wrap">
+      <div class="container">
+        <div class="categories-text">Sections</div>
+        <div class="categories-slider-wrap">
+          <div class="categories-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="categories-item">All</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Onboarding</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Home</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Breathe</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Meditate</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Move</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Lifestyle</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Medical</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Music</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Navigation</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Other</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Live</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Lorem Iplsum</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Dolor Sit</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="categories-item">Amet Parso</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <img src="assets/images/angle-next.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Categories -->
+
+    <div class="tab-content-wrap">
+      <div class="container">
+        <div class="tab-content tab-ios tab-active">
+          <div class="screens-wrap inner-screens">
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-1.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-2.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-3.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-1.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-2.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-3.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-1.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-2.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END screens-wrap -->
+          <div class="content-loading">
+            <img src="assets/images/loader.gif" alt="loading" />
+          </div>
+        </div>
+        <div class="tab-content tab-android">
+          <div class="screens-wrap inner-screens">
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-1.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-2.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-3.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-1.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-2.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen1-3.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-1.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="screen-item">
+              <a
+                href="#"
+                onclick="screenPopupToggle(event)"
+                class="screen-item-image"
+              >
+                <img src="assets/images/screen2-2.png" alt="" />
+              </a>
+              <div class="screen-item-overlay">
+                <div class="screen-item-name">
+                  <img src="assets/images/app-icon2.png" alt="" />
+                  <h3>Gojek</h3>
+                </div>
+                <div class="screen-item-buttons">
+                  <div class="screen-item-btn" data-title="Save to collection">
+                    <img src="assets/images/plus.svg" alt="" />
+                  </div>
+                  <div class="screen-item-btn" onclick="moreDropdown(this)">
+                    <img src="assets/images/more.svg" alt="" />
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-download.svg"
+                            alt="download"
+                          />
+                          Download
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-png.svg"
+                            alt="Copy as PNG"
+                          />
+                          Copy as PNG
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="assets/images/icon-copy-link.svg"
+                            alt="Copy Link"
+                          />
+                          Copy Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END screens-wrap -->
+          <div class="content-loading">
+            <img src="assets/images/loader.gif" alt="loading" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p>&copy; 2022 Appshots. All Rights Reserved.</p>
+        <p><a href="#">Terms &amp; Privacy</a></p>
+      </div>
+    </div>
+    <!-- END Footer -->
+
+    <!-- Login Page / Popup -->
+    <div class="login-wrap" style="display: none">
+      <!-- hiding the popup with inline css just for demo purpose-->
+      <div class="login-close" onclick="loginPopupToggle(event)">X</div>
+      <div class="container">
+        <h2>Login or Sign up</h2>
+        <div class="form-wrap">
+          <div class="social-login-item">
+            <a href="#">
+              <img src="assets/images/google.svg" alt="google" />
+              <span>Continue with Google</span>
+            </a>
+          </div>
+          <div class="social-login-item">
+            <a href="#">
+              <img src="assets/images/fb.svg" alt="facebook" />
+              <span>Continue with Facebook</span>
+            </a>
+          </div>
+          <div class="social-login-item">
+            <a href="#">
+              <img src="assets/images/twitter.svg" alt="twitter" />
+              <span>Continue with Twitter</span>
+            </a>
+          </div>
+          <div class="email-login">
+            <div class="or-text"><span>Or</span></div>
+            <div class="email-ip-wrap">
+              <input
+                type="email"
+                class="email-ip"
+                name="email-login"
+                value=""
+                placeholder="Enter email address"
+              />
+            </div>
+            <input
+              type="submit"
+              name="submit_login"
+              value="Continue with Email"
+              class="email-button"
+            />
+          </div>
+        </div>
+        <div class="bottom-texts">
+          By continuing, you acknowledge that you have read and understood, and
+          agree to Appshot's <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>.
+        </div>
+      </div>
+    </div>
+    <!-- END Login Page / Popup -->
+
+    <!-- Image popup -->
+    <div class="inner-top-section screen-popup">
+      <div class="container">
+        <div class="inner-top-wrap">
+          <a
+            href="#"
+            onclick="screenPopupToggle(event)"
+            class="back-btn rounded-btn"
+          >
+            <img src="assets/images/close-small.svg" alt="" />
+          </a>
+          <div class="screen-pop-image">
+            <img src="assets/images/screenshot.png" alt="screen" />
+          </div>
+
+          <div class="right-buttons">
+            <div class="rounded-btn" data-tooltip="Save to collection">
+              <img src="assets/images/plus.svg" alt="save" />
+            </div>
+            <button
+              type="button"
+              class="rounded-btn"
+              data-tooltip="Share"
+              onclick="shareBoxToggle(event)"
+            >
+              <img src="assets/images/share.svg" alt="share" />
+            </button>
+            <div class="share-box">
+              <h4>Share this app</h4>
+              <div class="share-url-box">
+                <div class="share-copied">Copied to Clipboard</div>
+                <div class="share-url">
+                  https://appshots.design/apps/open-android-app-dummy-share-url-XSADWC65754674
+                </div>
+                <div class="share-copy" onclick="copyLink()">
+                  <img src="assets/images/share-copy.svg" alt="copy" />
+                </div>
+              </div>
+              <div class="share-others">
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-fb.svg" alt="facebook" />
+                  <span>Facebook</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-tw.svg" alt="twitter" />
+                  <span>Twitter</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-email.svg" alt="email" />
+                  <span>Email</span>
+                </button>
+              </div>
+            </div>
+            <a href="#" class="rounded-btn" data-tooltip="Download"
+              ><img src="assets/images/download.svg" alt="download"
+            /></a>
+          </div>
+          <a href="#" class="prev-btn rounded-btn">
+            <img src="assets/images/arrow-prev.svg" alt="" />
+          </a>
+          <a href="#" class="next-btn rounded-btn">
+            <img src="assets/images/arrow-next.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END Image popup -->
+
+    <!-- Header Javascript -->
+    <script src="assets/js/header.js"></script>
+    <!-- END Header Javascript -->
+
+    <!-- Swiper Javascript -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Carousel Javascript-->
+    <script>
+      const CarouselSwiper = new Swiper(".carousel", {
+        allowTouchMove: true,
+        loop: true,
+        autoplay: true,
+        autoplay: {
+          pauseOnMouseEnter: true,
+        },
+        speed: 500,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          1025: {
+            allowTouchMove: false,
+          },
+        },
+      });
+    </script>
+    <!-- END Carousel Javascript -->
+
+    <!-- Categories Javascript-->
+    <script>
+      const CategorySwiper = new Swiper(".categories-slider", {
+        freeMode: true,
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        slideToClickedSlide: true,
+        watchSlidesVisibility: true,
+        navigation: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+        },
+      });
+      // changing active class
+      CategorySwiper.on("click", function () {
+        Array.from(
+          document.querySelectorAll(".categories-slider .swiper-slide")
+        ).forEach((element, index) => {
+          element.classList.remove("swiper-slide-active");
+        });
+        var activeSlider = document.querySelector(
+          ".categories-slider .swiper-slide:nth-child(" +
+            (parseInt(CategorySwiper.clickedIndex) + 1) +
+            ")"
+        );
+        activeSlider.classList.add("swiper-slide-active");
+      });
+    </script>
+    <!-- END Categories Javascript -->
+
+    <!-- OS Tab Javascript -->
+    <script src="assets/js/os-tab-toggle.js"></script>
+    <!-- END OS Tab Javascript -->
+
+    <!-- Apps / Screen Tab Javascript -->
+    <script src="assets/js/app-screen-toggle.js"></script>
+    <!-- END Apps / Screen Tab Javascript -->
+
+    <!-- Searchbar Focus Javascript -->
+    <script src="assets/js/search-focus.js"></script>
+    <!-- END Searchbar Focus Javascript -->
+
+    <!-- Login Popup Javascript - for demo -->
+    <script src="assets/js/login.js"></script>
+    <!-- END Login Popup Javascript -->
+
+    <!-- screen-item more option script -->
+    <script src="assets/js/more-options.js"></script>
+    <!-- END screen-item more option script -->
+
+    <!-- share app script-->
+    <script src="assets/js/share-app.js"></script>
+    <!-- END share app script-->
+
+    <!-- screen popup script-->
+    <script src="assets/js/screen-popup.js"></script>
+    <!-- END screen popup script-->
+  </body>
+</html>
