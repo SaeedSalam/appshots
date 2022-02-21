@@ -267,27 +267,3 @@
     transform: translateY(0px);
   }
 }
-
-.dropzone-btn {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 15px;
-  border: 1px solid #444;
-  background: #eee;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  color: #333;
-  cursor: pointer;
-  font-size: 13px;
-  &:hover {
-    background: #ddd;
-  }
-  &.upload-btn {
-    background: #444;
-    color: #fff;
-    &:hover {
-      background: #111;
-    }
-  }
-}
