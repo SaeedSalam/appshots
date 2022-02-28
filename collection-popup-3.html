@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Collection Popup screens - AppShots</title>
+    <meta name="Description" content="AppShots - description here" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- adding following line to noindex the github page -->
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+
+  <body>
+    <!-- Collections Popup  - All screens -->
+    <div class="aps-popup" style="display: block">
+      <div class="aps-popup-wrap">
+        <div class="aps-popup-content">
+          <div class="aps-popup-close aps-close" onclick="closePopup(event)">
+            X
+          </div>
+          <h3>Create a new collection</h3>
+          <div class="aps-form-wrap">
+            <form>
+              <div class="aps-form-search-wrap">
+                <div class="aps-form-search-field">
+                  <input
+                    type="text"
+                    value=""
+                    name="aps_search"
+                    placeholder="Search collections"
+                  />
+                </div>
+                <ul class="aps-form-search-results">
+                  <li class="no-items">
+                    <div class="search-icon">
+                      <img
+                        src="assets/images/icon-collection.png"
+                        alt="collection"
+                      />
+                    </div>
+                    <div class="search-texts">
+                      <h4>Cool Stuffs</h4>
+                      <span>0 item</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="aps-form-actions">
+                <button
+                  type="button"
+                  class="aps-btn aps-btn-transparent aps-btn-right"
+                >
+                  Create a new Collection
+                </button>
+                <button
+                  type="button"
+                  class="aps-btn aps-btn-dark aps-close"
+                  onclick="closePopup(event)"
+                >
+                  Done
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Collections Popup -->
+
+    <!-- popup scripts -->
+    <script src="assets/js/aps-popup.js"></script>
+    <!-- END popup script -->
+  </body>
+</html>
