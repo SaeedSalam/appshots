@@ -116,10 +116,19 @@
       resize: none;
     }
   }
+  .aps-form-actions {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
   .aps-btn {
     cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: 1.6px solid #c4c4c4;
     border-radius: 50px;
     background: #fff;
@@ -137,8 +146,18 @@
       background: #000;
       color: #fff;
     }
+    &.aps-btn-right {
+      float: right;
+    }
     &:hover {
       opacity: 0.8;
+    }
+    img {
+      display: block;
+      margin-right: 8px;
+    }
+    &.btn-loading {
+      pointer-events: none;
     }
     @media (min-width: $sm) {
       border-radius: 80px;
@@ -146,10 +165,174 @@
       padding: 12px 24px;
     }
   }
-  .aps-btn + .aps-btn {
+  .aps-btn:not(.aps-btn-right) + .aps-btn {
     margin-left: 10px;
     @media (min-width: $sm) {
       margin-left: 20px;
+    }
+  }
+
+  .aps-form-search-wrap {
+    position: relative;
+  }
+  .aps-form-search-field {
+    position: relative;
+    margin: 0 0 24px;
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url(../images/search.svg) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    input {
+      display: block;
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #e8e7e5;
+      box-sizing: border-box;
+      border-radius: 9px;
+      padding: 15px 15px 15px 50px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #111;
+      ::placeholder {
+        color: #757575;
+      }
+    }
+  }
+  .aps-form-search-results {
+    position: relative;
+    margin: 0 0 25px;
+    height: 200px;
+    overflow: auto;
+    li {
+      margin: 0 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      border-radius: 9px;
+      padding: 14px;
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #c4c4c4;
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .search-icon {
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      margin-right: 20px;
+      background: #e8e7e5;
+      border: 1px dashed #c4c4c4;
+      img {
+        display: block;
+      }
+    }
+    .search-texts {
+      h4 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.15;
+        color: #000000;
+        margin: 0 0 5px;
+      }
+      span {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #606163;
+      }
+    }
+  }
+  .aps-form-search-results li:not(.no-items):nth-child(5n + 0) .search-icon {
+    background: #58aefe;
+    border-color: #58aefe;
+  }
+  .aps-form-search-results li:not(.no-items):nth-child(5n + 1) .search-icon {
+    background: #fe9458;
+    border-color: #fe9458;
+  }
+  .aps-form-search-results li:not(.no-items):nth-child(5n + 2) .search-icon {
+    background: #fa7b7b;
+    border-color: #fa7b7b;
+  }
+  .aps-form-search-results li:not(.no-items):nth-child(5n + 3) .search-icon {
+    background: #9d79ea;
+    border-color: #9d79ea;
+  }
+  .aps-form-search-results li:not(.no-items):nth-child(5n + 4) .search-icon {
+    background: #4dc07e;
+    border-color: #4dc07e;
+  }
+  .aps-form-search-results li {
+    input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    input:checked + .checkbox::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    input:checked + .checkbox::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url(../images/icon-tick.png) no-repeat center;
+      background-size: contain;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    input:checked ~ .search-texts {
+      z-index: 3;
+      position: relative;
+      pointer-events: none;
+      h4 {
+        color: #fff;
+      }
+      span {
+        color: #eee;
+      }
     }
   }
 }
