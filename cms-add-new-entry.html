@@ -111,6 +111,16 @@
             >
               <img src="assets/images/delete.svg" alt="delete" />
             </button>
+            <button
+              type="button"
+              class="rounded-btn switch-btn"
+              data-tooltip="Save to Production?"
+            >
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+            </button>
           </div>
         </div>
       </div>
@@ -441,15 +451,6 @@
         maxFiles: 10,
         init: function () {
           var iosDropzone = this;
-          // trigger upload
-          document.getElementById("uploadIosImages").onclick = function (e) {
-            e.preventDefault();
-            iosDropzone.processQueue();
-          };
-          document.getElementById("cancelIosImages").onclick = function (e) {
-            e.preventDefault();
-            iosDropzone.removeAllFiles();
-          };
         },
         success: function (file, response) {
           file.previewElement.innerHTML = "";
@@ -473,20 +474,6 @@
         maxFiles: 10,
         init: function () {
           var androidDropzone = this;
-
-          // trigger upload
-          document.getElementById("uploadAndroidImages").onclick = function (
-            e
-          ) {
-            e.preventDefault();
-            androidDropzone.processQueue();
-          };
-          document.getElementById("cancelAndroidImages").onclick = function (
-            e
-          ) {
-            e.preventDefault();
-            androidDropzone.removeAllFiles();
-          };
         },
         success: function (file, response) {
           file.previewElement.innerHTML = "";
