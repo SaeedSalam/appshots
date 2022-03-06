@@ -9,9 +9,13 @@
     position: relative;
     margin: 0 0 30px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
     .rounded-btn {
       display: inline-flex;
-      margin: 0 20px 0 0;
+      margin: 0 15px 0 0;
       &:last-child {
         margin: 0;
       }
@@ -21,6 +25,8 @@
       top: 0;
       right: 0;
       margin: 0;
+      display: block;
+      width: auto;
       .rounded-btn {
         display: flex;
         margin: 0 0 20px;
@@ -247,7 +253,6 @@
   }
   .prev-btn,
   .next-btn {
-    display: none;
     position: absolute;
     bottom: 0;
     @media (min-width: $sm) {
