@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inner page - AppShots</title>
+    <meta name="Description" content="AppShots - description here" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- adding following line to noindex the github page -->
+    <meta name="robots" content="noindex,nofollow" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container">
+        <div class="header-wrap">
+          <div class="header-menu">
+            <div class="menu-toggler" onclick="menuToggle(event)">
+              <img class="bars" src="assets/images/menu.svg" alt="" />
+              <img class="close" src="assets/images/menu-close.svg" alt="" />
+            </div>
+            <ul>
+              <li class="active"><a href="#">Browse</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <div class="header-logo">
+            <h2>
+              <a href="index.html">
+                <img
+                  src="assets/images/logo.svg"
+                  alt="appshots"
+                  width="20"
+                  height="20"
+                />
+                <span>Appshots</span>
+              </a>
+            </h2>
+          </div>
+          <div class="header-user">
+            <a class="user-button" href="#">Feedbacks</a>
+            <!-- <a class="user-login" href="#" onclick="loginPopupToggle(event)">Login</a> -->
+            <div class="user-dropdown">
+              <a
+                href="#"
+                onclick="userDropdownToggle(event)"
+                class="user-toggler"
+              >
+                <img src="assets/images/user.png" alt="" />
+              </a>
+              <div class="dropdown-box">
+                <div class="dropdown-info">
+                  <img src="assets/images/user.png" alt="" />
+                  <div class="user-details">
+                    <h5>John Hopkins</h5>
+                    <p>johnhopkins@gmail.com</p>
+                  </div>
+                </div>
+                <ul>
+                  <li><a href="#">Manage Memberships</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Help &amp; Support</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END header -->
+
+    <div class="inner-top-section">
+      <div class="container">
+        <div class="inner-top-wrap">
+          <a href="#" class="back-btn rounded-btn">
+            <img src="assets/images/arrow-prev.svg" alt="" />
+          </a>
+
+          <!-- END iOS / Android Tab -->
+          <div class="inner-app-details">
+            <div class="collection-logo">
+              <img
+                src="assets/images/collection-inner-icon.png"
+                width="58"
+                height="58"
+                alt="logo"
+              />
+            </div>
+            <!-- <div class="app-logo app-android-logo">
+                        <img src="assets/images/app-icon-big.png" width="172" height="172" alt="logo" />
+                    </div> -->
+            <h1>Cool Stuffs</h1>
+          </div>
+          <div class="right-buttons">
+            <div class="rounded-btn" data-tooltip="Edit this collection">
+              <img src="assets/images/icon-edit.svg" alt="edit" />
+            </div>
+
+            <a
+              href="#"
+              class="rounded-btn"
+              data-tooltip="Delete this collection"
+              data-popup="popup-delete-confirm"
+              onclick="openPopup(event)"
+              ><img src="assets/images/delete-icon.svg" alt="delete"
+            /></a>
+            <button
+              type="button"
+              class="rounded-btn"
+              data-tooltip="Share"
+              onclick="shareBoxToggle(event)"
+            >
+              <img src="assets/images/share.svg" alt="share" />
+            </button>
+            <div class="share-box">
+              <h4>Share this app</h4>
+              <div class="share-url-box">
+                <div class="share-copied">Copied to Clipboard</div>
+                <div class="share-url">
+                  https://appshots.design/apps/open-android-app-dummy-share-url-XSADWC65754674
+                </div>
+                <div class="share-copy" onclick="copyLink()">
+                  <img src="assets/images/share-copy.svg" alt="copy" />
+                </div>
+              </div>
+              <div class="share-others">
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-fb.svg" alt="facebook" />
+                  <span>Facebook</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-tw.svg" alt="twitter" />
+                  <span>Twitter</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-email.svg" alt="email" />
+                  <span>Email</span>
+                </button>
+              </div>
+            </div>
+            <!-- <a href="#" class="rounded-btn" data-tooltip="View on Play Store"><img
+                                src="assets/images/playstore.svg" alt="download" /></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="collections-tab">
+      <div class="container">
+        <div class="collections-tab-items">
+          <span href="#" class="tab-link active" onclick="collectionTabToggle()"
+            >Screens</span
+          >
+          <span href="#" class="tab-link" onclick="collectionTabToggle()"
+            >Apps</span
+          >
+        </div>
+        <div class="collections-tab-content">
+          <div class="tab-item">
+            <div class="cards-wrap">
+              <div class="card-box">
+                <div
+                  class="card-head-plus"
+                  data-popup="popup-delete-confirm"
+                  data-tooltip="Delete this item"
+                  onclick="openPopup(event)"
+                >
+                  <img src="assets/images/delete-icon.svg" alt="" />
+                </div>
+                <a href="inner.html">
+                  <div class="card-head">
+                    <div class="card-logo">
+                      <img
+                        src="assets/images/app-icon.png"
+                        width="60"
+                        height="60"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-title">
+                      <div class="card-title-top">
+                        <h3>Open</h3>
+                        <span class="card-badge cb-green">version update</span>
+                      </div>
+                      <div class="card-title-bottom">
+                        breathwork, meditation, yoga
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-1.png" alt="" />
+                    </div>
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-2.png" alt="" />
+                    </div>
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-3.png" alt="" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- END card-box -->
+
+              <div class="card-box">
+                <div
+                  class="card-head-plus"
+                  data-popup="popup-delete-confirm"
+                  data-tooltip="Delete this item"
+                  onclick="openPopup(event)"
+                >
+                  <img src="assets/images/delete-icon.svg" alt="" />
+                </div>
+                <a href="inner.html">
+                  <div class="card-head">
+                    <div class="card-logo">
+                      <img
+                        src="assets/images/app-icon.png"
+                        width="60"
+                        height="60"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-title">
+                      <div class="card-title-top">
+                        <h3>Open</h3>
+                        <span class="card-badge cb-green">version update</span>
+                      </div>
+                      <div class="card-title-bottom">
+                        breathwork, meditation, yoga
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-1.png" alt="" />
+                    </div>
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-2.png" alt="" />
+                    </div>
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-3.png" alt="" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- END card-box -->
+
+              <div class="card-box">
+                <div
+                  class="card-head-plus"
+                  data-popup="popup-delete-confirm"
+                  data-tooltip="Delete this item"
+                  onclick="openPopup(event)"
+                >
+                  <img src="assets/images/delete-icon.svg" alt="" />
+                </div>
+                <a href="inner.html">
+                  <div class="card-head">
+                    <div class="card-logo">
+                      <img
+                        src="assets/images/app-icon.png"
+                        width="60"
+                        height="60"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-title">
+                      <div class="card-title-top">
+                        <h3>Open</h3>
+                        <span class="card-badge cb-green">version update</span>
+                      </div>
+                      <div class="card-title-bottom">
+                        breathwork, meditation, yoga
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-1.png" alt="" />
+                    </div>
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-2.png" alt="" />
+                    </div>
+                    <div class="card-content-item">
+                      <img src="assets/images/screen1-3.png" alt="" />
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- END card-box -->
+            </div>
+            <!-- END cards-wrap -->
+          </div>
+          <!-- END tab-item -->
+
+          <div class="tab-item active-tab">
+            <div class="screens-wrap inner-screens">
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen1-1.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen1-2.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen1-3.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen2-1.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen2-2.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen2-3.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen1-1.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-item">
+                <a
+                  href="#"
+                  onclick="screenPopupToggle(event)"
+                  class="screen-item-image"
+                >
+                  <img src="assets/images/screen1-2.png" alt="" />
+                </a>
+                <div class="screen-item-overlay">
+                  <div class="screen-item-name">
+                    <img src="assets/images/app-icon2.png" alt="" />
+                    <h3>Gojek</h3>
+                  </div>
+                  <div class="screen-item-buttons">
+                    <div class="screen-item-btn" onclick="moreDropdown(this)">
+                      <img src="assets/images/more.svg" alt="" />
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-download.svg"
+                              alt="download"
+                            />
+                            Download
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-png.svg"
+                              alt="Copy as PNG"
+                            />
+                            Copy as PNG
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <img
+                              src="assets/images/icon-copy-link.svg"
+                              alt="Copy Link"
+                            />
+                            Copy Link
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END screens-wrap -->
+          </div>
+          <!-- END tab-item -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p>&copy; 2022 Appshots. All Rights Reserved.</p>
+        <p><a href="#">Terms &amp; Privacy</a></p>
+      </div>
+    </div>
+    <!-- END Footer -->
+
+    <!-- Delete Confirmation -->
+    <div class="aps-popup" id="popup-delete-confirm" style="display: none">
+      <div class="aps-popup-wrap">
+        <div class="aps-popup-content">
+          <div class="aps-popup-close aps-close" onclick="closePopup(event)">
+            X
+          </div>
+          <h3>Are you sure?</h3>
+          <p>
+            This cannot be reversed. Click <strong>Cancel</strong> to go back.
+          </p>
+          <div class="aps-form-wrap">
+            <form>
+              <div class="aps-form-actions">
+                <button type="submit" class="aps-btn aps-btn-transparent">
+                  Yes! Delete This.
+                </button>
+                <button
+                  type="button"
+                  class="aps-btn aps-btn-dark aps-close"
+                  onclick="closePopup(event)"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Delete Confirmation -->
+
+    <!-- Login Page / Popup -->
+    <div class="login-wrap" style="display: none">
+      <!-- hiding the popup with inline css just for demo purpose-->
+      <div class="login-close" onclick="loginPopupToggle(event)">X</div>
+      <div class="container">
+        <h2>Login or Sign up</h2>
+        <div class="form-wrap">
+          <div class="social-login-item">
+            <a href="#">
+              <img src="assets/images/google.svg" alt="google" />
+              <span>Continue with Google</span>
+            </a>
+          </div>
+          <div class="social-login-item">
+            <a href="#">
+              <img src="assets/images/fb.svg" alt="facebook" />
+              <span>Continue with Facebook</span>
+            </a>
+          </div>
+          <div class="social-login-item">
+            <a href="#">
+              <img src="assets/images/twitter.svg" alt="twitter" />
+              <span>Continue with Twitter</span>
+            </a>
+          </div>
+          <div class="email-login">
+            <div class="or-text"><span>Or</span></div>
+            <div class="email-ip-wrap">
+              <input
+                type="email"
+                class="email-ip"
+                name="email-login"
+                value=""
+                placeholder="Enter email address"
+              />
+            </div>
+            <input
+              type="submit"
+              name="submit_login"
+              value="Continue with Email"
+              class="email-button"
+            />
+          </div>
+        </div>
+        <div class="bottom-texts">
+          By continuing, you acknowledge that you have read and understood, and
+          agree to Appshot's <a href="#">Terms of Service</a> and
+          <a href="#">Privacy Policy</a>.
+        </div>
+      </div>
+    </div>
+    <!-- END Login Page / Popup -->
+
+    <!-- Image popup -->
+    <div class="inner-top-section screen-popup">
+      <div class="container">
+        <div class="inner-top-wrap">
+          <a
+            href="#"
+            onclick="screenPopupToggle(event)"
+            class="back-btn rounded-btn"
+          >
+            <img src="assets/images/close-small.svg" alt="" />
+          </a>
+          <div class="screen-pop-image">
+            <img src="assets/images/screenshot.png" alt="screen" />
+          </div>
+
+          <div class="right-buttons">
+            <div class="rounded-btn" data-tooltip="Save to collection">
+              <img src="assets/images/plus.svg" alt="save" />
+            </div>
+            <button
+              type="button"
+              class="rounded-btn"
+              data-tooltip="Share"
+              onclick="shareBoxToggle(event)"
+            >
+              <img src="assets/images/share.svg" alt="share" />
+            </button>
+            <div class="share-box">
+              <h4>Share this app</h4>
+              <div class="share-url-box">
+                <div class="share-copied">Copied to Clipboard</div>
+                <div class="share-url">
+                  https://appshots.design/apps/open-android-app-dummy-share-url-XSADWC65754674
+                </div>
+                <div class="share-copy" onclick="copyLink()">
+                  <img src="assets/images/share-copy.svg" alt="copy" />
+                </div>
+              </div>
+              <div class="share-others">
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-fb.svg" alt="facebook" />
+                  <span>Facebook</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-tw.svg" alt="twitter" />
+                  <span>Twitter</span>
+                </button>
+                <button type="button" class="share-other-item">
+                  <img src="assets/images/share-email.svg" alt="email" />
+                  <span>Email</span>
+                </button>
+              </div>
+            </div>
+            <a href="#" class="rounded-btn" data-tooltip="Download"
+              ><img src="assets/images/download.svg" alt="download"
+            /></a>
+          </div>
+          <a href="#" class="prev-btn rounded-btn">
+            <img src="assets/images/arrow-prev.svg" alt="" />
+          </a>
+          <a href="#" class="next-btn rounded-btn">
+            <img src="assets/images/arrow-next.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END Image popup -->
+
+    <!-- Header Javascript -->
+    <script src="assets/js/header.js"></script>
+    <!-- END Header Javascript -->
+
+    <!-- Apps / Screen Tab Javascript -->
+    <script src="assets/js/collection-tab-toggle.js"></script>
+    <!-- END Apps / Screen Tab Javascript -->
+
+    <!-- Login Popup Javascript - for demo -->
+    <script src="assets/js/login.js"></script>
+    <!-- END Login Popup Javascript -->
+
+    <!-- share app script-->
+    <script src="assets/js/share-app.js"></script>
+    <!-- END share app script-->
+
+    <!-- screen popup script-->
+    <script src="assets/js/screen-popup.js"></script>
+    <!-- END screen popup script-->
+
+    <!-- popup scripts -->
+    <script src="assets/js/aps-popup.js"></script>
+    <!-- END popup script -->
+
+    <!-- screen-item more option script -->
+    <script src="assets/js/more-options.js"></script>
+    <!-- END screen-item more option script -->
+  </body>
+</html>
