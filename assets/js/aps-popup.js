@@ -33,6 +33,7 @@ Array.from(document.querySelectorAll(".aps-form-item .form-ip")).forEach(
       function () {
         let remLength = 0;
         remLength = maxLength - parseInt(getInput.value.length);
+
         if (remLength < 0) {
           getInput.value = getInput.value.substring(0, maxLength);
           return false;
@@ -43,17 +44,3 @@ Array.from(document.querySelectorAll(".aps-form-item .form-ip")).forEach(
     );
   }
 );
-
-// txtBoxRef.addEventListener(
-//   "input",
-//   function () {
-//     var remLength = 0;
-//     remLength = 64 - parseInt(txtBoxRef.value.length);
-//     if (remLength < 0) {
-//       txtBoxRef.value = txtBoxRef.value.substring(0, 64);
-//       return false;
-//     }
-//     counterRef.innerHTML = remLength;
-//   },
-//   true
-// );
