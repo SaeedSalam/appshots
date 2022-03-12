@@ -71,9 +71,7 @@
     display: flex;
     align-items: center;
     margin: 0 0 16px;
-    @media (min-width: $xs) {
-      padding: 0 40px 0 0;
-    }
+    padding: 0 40px 0 0;
   }
   .card-logo {
     width: 60px;
@@ -90,7 +88,9 @@
     }
   }
   .card-head-plus {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     z-index: 2;
     right: 20px;
@@ -106,9 +106,6 @@
       background: #ccc;
     }
     @media (min-width: $xs) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       &[data-tooltip]::before {
         content: attr(data-tooltip);
         display: block;
@@ -250,6 +247,9 @@
     top: 0;
     left: 0;
     object-fit: contain;
+  }
+  &:empty {
+    animation: none;
   }
 }
 

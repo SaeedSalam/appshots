@@ -28,16 +28,15 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #fff;
-    color: #000;
-    text-align: center;
-    line-height: 30px;
-    text-transform: lowercase;
-    font-weight: bold;
-    font-size: 18px;
+    background-image: url(../images/close-small.svg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    color: transparent;
     cursor: pointer;
+    background-position: center;
     &:hover {
-      background: #ddd;
+      background-color: #ddd;
     }
   }
   .aps-popup-content {
@@ -106,6 +105,7 @@
       border: 1px solid #e8e7e5;
       padding: 15px;
       border-radius: 9px;
+      font-family: inherit;
       &:focus {
         border-color: #666;
         outline: none;
@@ -281,6 +281,25 @@
     background: #4dc07e;
     border-color: #4dc07e;
   }
+  .aps-form-search-results::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .aps-form-search-results::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+
+  .aps-form-search-results::-webkit-scrollbar-thumb {
+    background-color: #777;
+    border-radius: 100px;
+  }
+  .aps-form-search-results {
+    padding-right: 10px;
+    scrollbar-color: #777 #e4e4e4;
+    scrollbar-width: thin;
+  }
+
   .aps-form-search-results li {
     input {
       display: block;
@@ -322,6 +341,9 @@
       transform: translateY(-50%);
       pointer-events: none;
       z-index: 1;
+    }
+    input:checked:hover + .checkbox::after {
+      background: url(../images/icon-minus.png) no-repeat center;
     }
     input:checked ~ .search-texts {
       z-index: 3;
