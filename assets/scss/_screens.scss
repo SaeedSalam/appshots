@@ -84,13 +84,35 @@
     display: block;
     border-radius: 11px;
     cursor: zoom-in;
-    width: 100%;
+    aspect-ratio: 0.461538462;
     background: #f0efea;
+    background-image: linear-gradient(
+      to right,
+      #f0efea 0%,
+      #f3f3ef 20%,
+      #f0efea 40%,
+      #f3f3ef 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 200px 400px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 10;
+    animation-name: effectShimmer;
+    animation-timing-function: linear;
     img {
       display: block;
       width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
       border-radius: 11px;
       pointer-events: none;
+    }
+    &:empty {
+      animation: none;
     }
   }
   .screen-item-overlay {

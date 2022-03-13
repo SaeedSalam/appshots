@@ -243,12 +243,13 @@
       width: auto;
       height: auto;
       max-height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       margin: 0 auto;
       object-position: center;
       cursor: zoom-out;
       border-radius: 30px;
       pointer-events: none;
+      aspect-ratio: 0.461538462;
     }
   }
   .prev-btn,
