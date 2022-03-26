@@ -1,0 +1,226 @@
+.invite-flow-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  width: 100%;
+  .header {
+    margin: 0;
+  }
+}
+.invite-flow-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  .invite-flow-content {
+    position: relative;
+    width: 695px;
+    max-width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    color: #000000;
+    text-align: center;
+    p {
+      margin: 0 0 20px;
+      color: inherit;
+      @media (min-width: $sm) {
+        margin: 0 0 30px;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    a {
+      color: #1e93ff;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media (min-width: $sm) {
+      font-size: 16px;
+    }
+  }
+  .invite-icon {
+    padding: 0 0 10px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .invite-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #191919;
+    padding: 10px 0;
+    @media (min-width: $sm) {
+      padding: 20px 0;
+    }
+  }
+  .invite-content {
+    text-align: left;
+    padding: 10px 0;
+  }
+  .invite-flow-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 0 0;
+    .invite-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 30px;
+      background: #191919;
+      border: 1.6px solid #191919;
+      border-radius: 80px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.4;
+      width: 100%;
+      margin-top: 20px;
+      outline: 0;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: inherit;
+      @media (min-width: $sm) {
+        width: calc(50% - 8px);
+      }
+      i {
+        width: 15px;
+        height: 10px;
+        display: block;
+        position: relative;
+        margin-left: 10px;
+        background-image: url(../images/arrow-right-white.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        background: #000;
+        text-decoration: none;
+        i {
+          background-position: right;
+        }
+      }
+      &.light-btn {
+        background: #fff;
+        color: #191919;
+        i {
+          background-image: url(../images/arrow-right-black.svg);
+        }
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+  .invite-flow-main {
+    padding: 25px 20px;
+    @media (min-width: $sm) {
+      padding: 50px 40px;
+    }
+  }
+
+  .invite-flow-footer {
+    border-top: 1px solid #e1e0db;
+    padding: 20px;
+
+    @media (min-width: $sm) {
+      padding: 30px;
+    }
+  }
+
+  .invite-form {
+    text-align: center;
+  }
+
+  .invite-form-box {
+    outline: 1.6px solid #c4c4c4;
+    border-radius: 11px;
+    display: flex;
+    width: 495px;
+    overflow: hidden;
+    text-align: left;
+    max-width: 100%;
+    margin: 0 auto;
+    @media (max-width: $xs) {
+      overflow: visible;
+      flex-direction: column;
+      outline: none;
+      border-radius: 0;
+    }
+    .invite-form-field {
+      display: flex;
+      flex-grow: 1;
+      border: 0;
+      padding: 18px 20px;
+      background: transparent;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: #222;
+      outline: 0;
+      ::placeholder {
+        color: #757575;
+      }
+      @media (max-width: $xs) {
+        border: 1.6px solid #c4c4c4;
+        border-radius: 11px;
+      }
+    }
+    .invite-form-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 18px 30px;
+      background: #191919;
+      border: 0;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.2;
+      width: max-content;
+      outline: 0;
+      text-decoration: none;
+      font-family: inherit;
+      cursor: pointer;
+      i {
+        width: 15px;
+        height: 10px;
+        display: block;
+        position: relative;
+        margin-left: 10px;
+        background-image: url(../images/arrow-right-white.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        background: #000;
+        text-decoration: none;
+        i {
+          background-position: right;
+        }
+      }
+      @media (max-width: $xs) {
+        margin: 20px 0 0;
+        border-radius: 11px;
+        width: 100%;
+      }
+    }
+  }
+}
