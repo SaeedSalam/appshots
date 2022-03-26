@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Invites Profile - AppShots</title>
+    <meta name="Description" content="AppShots - description here" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- adding following line to noindex the github page -->
+    <meta name="robots" content="noindex,nofollow" />
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+          <div class="header-wrap">
+            <div class="header-menu">
+              <div class="menu-toggler" onclick="menuToggle(event)">
+                <img class="bars" src="assets/images/menu.svg" alt="" />
+                <img class="close" src="assets/images/menu-close.svg" alt="" />
+              </div>
+              <ul>
+                <li class="active"><a href="#">Browse</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </div>
+            <div class="header-logo">
+              <h1>
+                <a href="index.html">
+                  <img
+                    src="assets/images/logo.svg"
+                    alt="appshots"
+                    width="20"
+                    height="20"
+                  />
+                  <span>Appshots</span>
+                </a>
+              </h1>
+            </div>
+            <div class="header-user">
+              <a class="user-button" href="#">Feedbacks</a>
+              <!-- <a class="user-login" href="#" onclick="loginPopupToggle(event)">Login</a> -->
+              <div class="user-dropdown">
+                <a
+                  href="#"
+                  onclick="userDropdownToggle(event)"
+                  class="user-toggler"
+                >
+                  <img src="assets/images/user.png" alt="" />
+                  <span class="dot"></span>
+                </a>
+                <div class="dropdown-box">
+                  <div class="dropdown-info">
+                    <img src="assets/images/user.png" alt="" />
+                    <div class="user-details">
+                      <h5>John Hopkins</h5>
+                      <p>johnhopkins@gmail.com</p>
+                    </div>
+                  </div>
+                  <ul>
+                    <li><a href="#">Manage Memberships</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Help &amp; Support</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END header -->
+
+    <div class="collection-profile-top">
+        <div class="container">
+            <div class="collection-meta">
+                <img src="assets/images/profile.png" width="100" height="100" alt="profile"
+                    class="collection-profile-img" />
+                <div class="profile-data">
+                    <div class="profile-name">Eric Hoffman</div>
+                    <div class="profile-location">
+                        <img src="assets/images/icon-location.svg" alt="" />
+                        <span>Newyork, US</span>
+                    </div>
+                </div>
+            </div>
+            <div class="invite-email-wrap" id="inviteByEmail">
+                <div class="invite-email-left">
+                    <h4>You have 5 invites</h4>
+                    <p>Who's a great potential addition to Appshots? You'll get a credit for the invite on their
+                        profile!</p>
+                </div>
+                <div class="invite-email-right">
+                    <form>
+                        <div class="invite-form-box">
+                            <input class="invite-form-field" type="text" placeholder="Email address" name="" value=""
+                                required />
+                            <button type="submit" class="invite-form-btn">
+                                Send Invitation<i></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="invite-email-close" onclick="removeThisDiv()">
+                    <img src="assets/images/close-email.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content-wrap collections-wrap">
+
+        <div class="container">
+            <div class="collections-title-wrap">
+                <img src="assets/images/profile.png" width="30" height="30" alt="profile"
+                    class="collection-title-img" />
+                <div class="profile-title">Eric Hoffman</div>
+                <div class="collections-title">Collections</div>
+                <div class="collect-line"></div>
+            </div>
+            <div class="cards-wrap">
+                <div class="card-box">
+                    <div class="card-head-more" onclick="moreDropdown(this)">
+                        <img src="assets/images/icon-more.svg" alt="" />
+                        <ul>
+                            <li>
+                                <button type="button" onclick="openPopup(event)" data-popup="collections-popup">
+                                    <img src="assets/images/edit-icon.svg" alt="Edit" />
+                                    Edit Collection
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/delete-icon.svg" alt="Delete" />
+                                    Delete Collection
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="inner.html">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/icon-collection.png" width="32" height="32" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Cool Stuffs</h3>
+                                </div>
+                                <div class="card-title-bottom">2 item</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item"></div>
+                        </div>
+                    </a>
+                </div>
+                <!-- END card-box -->
+
+                <div class="card-box">
+                    <div class="card-head-more" onclick="moreDropdown(this)">
+                        <img src="assets/images/icon-more.svg" alt="" />
+                        <ul>
+                            <li>
+                                <button type="button" onclick="openPopup(event)" data-popup="collections-popup">
+                                    <img src="assets/images/edit-icon.svg" alt="Edit" />
+                                    Edit Collection
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/delete-icon.svg" alt="Delete" />
+                                    Delete Collection
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="inner.html">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/icon-collection.png" width="32" height="32" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Cool Stuffs</h3>
+                                </div>
+                                <div class="card-title-bottom">1 item</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item"></div>
+                            <div class="card-content-item"></div>
+                        </div>
+                    </a>
+                </div>
+                <!-- END card-box -->
+
+                <div class="card-box">
+                    <div class="card-head-more" onclick="moreDropdown(this)">
+                        <img src="assets/images/icon-more.svg" alt="" />
+                        <ul>
+                            <li>
+                                <button type="button" onclick="openPopup(event)" data-popup="collections-popup">
+                                    <img src="assets/images/edit-icon.svg" alt="Edit" />
+                                    Edit Collection
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/images/delete-icon.svg" alt="Delete" />
+                                    Delete Collection
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="inner.html">
+                        <div class="card-head">
+                            <div class="card-logo">
+                                <img src="assets/images/icon-collection.png" width="32" height="32" alt="" />
+                            </div>
+                            <div class="card-title">
+                                <div class="card-title-top">
+                                    <h3>Cool Stuffs</h3>
+                                </div>
+                                <div class="card-title-bottom">3 item</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-1.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-2.png" alt="" />
+                            </div>
+                            <div class="card-content-item">
+                                <img src="assets/images/screen1-3.png" alt="" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- END card-box -->
+            </div>
+            <!-- END cards-wrap -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <p>
+                &copy; 2022 Appshots. All Rights Reserved.
+                <a href="#">Terms &amp; Privacy</a>
+            </p>
+        </div>
+    </div>
+    <!-- END Footer -->
+
+    <!-- Login Page / Popup -->
+    <div class="login-wrap" style="display: none">
+        <!-- hiding the popup with inline css just for demo purpose-->
+        <div class="login-close" onclick="loginPopupToggle(event)">X</div>
+        <div class="container">
+            <h2>Login or Sign up</h2>
+            <div class="form-wrap">
+                <div class="social-login-item">
+                    <a href="#">
+                        <img src="assets/images/google.svg" alt="google" />
+                        <span>Continue with Google</span>
+                    </a>
+                </div>
+                <div class="social-login-item">
+                    <a href="#">
+                        <img src="assets/images/fb.svg" alt="facebook" />
+                        <span>Continue with Facebook</span>
+                    </a>
+                </div>
+                <div class="social-login-item">
+                    <a href="#">
+                        <img src="assets/images/twitter.svg" alt="twitter" />
+                        <span>Continue with Twitter</span>
+                    </a>
+                </div>
+                <div class="email-login">
+                    <div class="or-text"><span>Or</span></div>
+                    <div class="email-ip-wrap">
+                        <input type="email" class="email-ip" name="email" value="" placeholder="Enter email address" />
+                    </div>
+                    <input type="submit" name="submit_login" value="Continue with Email" class="email-button" />
+                </div>
+            </div>
+            <div class="bottom-texts">
+                By continuing, you acknowledge that you have read and understood, and
+                agree to Appshot's <a href="#">Terms of Service</a> and
+                <a href="#">Privacy Policy</a>.
+            </div>
+        </div>
+    </div>
+    <!-- END Login Page / Popup -->
+
+    <!-- Collections Popup -->
+    <div class="aps-popup" id="collections-popup" style="display: none">
+        <div class="aps-popup-wrap">
+            <div class="aps-popup-content">
+                <div class="aps-popup-close aps-close" onclick="closePopup(event)">
+                    X
+                </div>
+                <h3>Edit Popup</h3>
+                <div class="aps-form-wrap">
+                    <form>
+                        <div class="aps-form-item">
+                            <div class="text-counter" data-maxcount="64">64</div>
+                            <label>Name</label>
+                            <input required type="text" name="ip" value="Cool Stuffs" placeholder="e.g: Cool Stuffs"
+                                class="form-ip" />
+                        </div>
+                        <div class="aps-form-item">
+                            <div class="text-counter" data-maxcount="160">160</div>
+                            <label>Description (optional)</label>
+                            <textarea
+                                class="form-ip">Screen references for my pet project. &#13;&#10; &#13;&#10;Flows included:Onboarding Screen, Sign Up, Subscription</textarea>
+                        </div>
+                        <div class="aps-form-actions">
+                            <button type="submit" class="aps-btn aps-btn-dark">
+                                Update
+                            </button>
+                            <!-- <button type="button" class="aps-btn aps-btn-dark btn-loading">
+                  <img
+                    src="assets/images/icon-processing.svg"
+                    alt="processing"
+                  />Processing...
+                </button> -->
+                            <button type="button" class="aps-btn aps-btn-transparent aps-close"
+                                onclick="closePopup(event)">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Collections Popup -->
+
+    <!-- Header Javascript -->
+    <script src="assets/js/header.js"></script>
+    <!-- END Header Javascript -->
+
+    <!-- Apps / Screen Tab Javascript -->
+    <script src="assets/js/app-screen-toggle.js"></script>
+    <!-- END Apps / Screen Tab Javascript -->
+
+    <!-- Login Popup Javascript - for demo -->
+    <script src="assets/js/login.js"></script>
+    <!-- END Login Popup Javascript -->
+
+    <!-- collections more option script -->
+    <script src="assets/js/more-options-collection.js"></script>
+    <!-- END collections more option script -->
+
+    <!-- popup scripts -->
+    <script src="assets/js/aps-popup.js"></script>
+    <!-- END popup script -->
+
+    <script>
+        const el = document.querySelector(".collections-title-wrap")
+        const observer = new IntersectionObserver(
+            ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+            { threshold: [1] }
+        );
+        observer.observe(el);
+    </script>
+    <script>
+        function removeThisDiv() {
+            const emailnviteDiv = document.getElementById("inviteByEmail");
+            emailnviteDiv.remove();
+        }        
+    </script>
+</body>
+
+</html>
