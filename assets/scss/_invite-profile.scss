@@ -1,0 +1,155 @@
+.invite-email-wrap {
+  background: #ffffff;
+  box-shadow: 0px 2px 5px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 21px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+  margin: 40px 0 -30px;
+  @media (min-width: $md) {
+    padding: 0 40px 0 0;
+    flex-direction: row;
+  }
+  .invite-email-left {
+    width: 100%;
+    padding: 24px 24px 12px;
+    @media (min-width: $md) {
+      width: 62%;
+      padding: 24px;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 29px;
+      margin: 0 0 10px;
+      color: #000000;
+      @media (min-width: $sm) {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 10px;
+      color: #000000;
+      &:last-child {
+        margin: 0;
+      }
+      @media (min-width: $sm) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .invite-email-right {
+    width: 100%;
+    padding: 12px 24px 24px;
+    @media (min-width: $md) {
+      width: 38%;
+      padding: 24px;
+    }
+    .invite-form-box {
+      outline: 1.6px solid #c4c4c4;
+      border-radius: 11px;
+      display: flex;
+      overflow: hidden;
+      text-align: left;
+      width: 100%;
+      margin: 0 auto;
+      @media (max-width: $xs) {
+        overflow: visible;
+        flex-direction: column;
+        outline: none;
+        border-radius: 0;
+      }
+      .invite-form-field {
+        display: flex;
+        flex-grow: 1;
+        border: 0;
+        padding: 18px 20px;
+        background: transparent;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: #222;
+        outline: 0;
+        width: 100%;
+        ::placeholder {
+          color: #757575;
+        }
+        @media (max-width: $xs) {
+          border: 1.6px solid #c4c4c4;
+          border-radius: 11px;
+        }
+      }
+      .invite-form-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 30px;
+        background: #191919;
+        border: 0;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 1.2;
+        width: max-content;
+        outline: 0;
+        text-decoration: none;
+        font-family: inherit;
+        cursor: pointer;
+        white-space: nowrap;
+        i {
+          width: 15px;
+          height: 10px;
+          display: block;
+          position: relative;
+          margin-left: 10px;
+          background-image: url(../images/arrow-right-white.svg);
+          background-repeat: no-repeat;
+          background-position: left;
+          background-size: contain;
+          transition: all 0.3s ease;
+        }
+        &:hover {
+          background: #000;
+          text-decoration: none;
+          i {
+            background-position: right;
+          }
+        }
+        @media (max-width: $xs) {
+          margin: 20px 0 0;
+          border-radius: 11px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .invite-email-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.4;
+    @media (min-width: $md) {
+      top: 50%;
+      right: 32px;
+      transform: translateY(-50%);
+    }
+    img {
+      display: block;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

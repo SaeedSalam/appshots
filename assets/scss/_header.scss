@@ -137,11 +137,32 @@
   }
   .user-toggler {
     cursor: pointer;
+    position: relative;
+    display: block;
     img {
       display: block;
       width: 32px;
       height: 32px;
       border-radius: 50%;
+    }
+    .dot {
+      display: block;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: #ff3a44;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      z-index: 2;
+      @media (min-width: $sm) {
+        top: 0;
+        right: 0;
+        width: 9px;
+        height: 9px;
+        border-width: 2px;
+      }
     }
   }
   .dropdown-box {
@@ -189,6 +210,9 @@
     li {
       padding: 7px 0;
       font-size: 13px;
+      a:hover {
+        color: #666;
+      }
     }
   }
 }
