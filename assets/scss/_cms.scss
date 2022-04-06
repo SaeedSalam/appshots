@@ -433,13 +433,17 @@
     background: #e1e0db;
     border-radius: 80px;
     display: inline-flex;
-    padding: 12px 16px;
+    padding: 8px 14px;
     margin: 10px 10px 0 0;
     align-items: center;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.25;
     color: #666666;
+    @media (min-width: $sm) {
+      font-size: 14px;
+      padding: 12px 16px;
+    }
     span {
       display: block;
       margin-left: 4px;
@@ -475,12 +479,16 @@
     background: #757575;
     border-radius: 80px;
     color: #fff;
-    padding: 12px 16px;
+    padding: 8px 14px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.25;
     margin: 10px 0 0;
     cursor: pointer;
+    @media (min-width: $sm) {
+      font-size: 14px;
+      padding: 12px 16px;
+    }
     &:hover {
       background: #333;
     }
@@ -499,10 +507,20 @@
     flex-direction: column;
     @media (max-width: $xs) {
       padding: 0;
+      margin: 0 0 30px;
     }
     @media (min-width: $sm) {
       padding: 30px 100px;
       flex-direction: row;
+    }
+  }
+}
+
+.inner-top-wrap {
+  .rounded-btn.screen-setting-btn {
+    display: none;
+    @media (max-width: $xs) {
+      display: flex;
     }
   }
 }

@@ -553,11 +553,7 @@
       margin: 8px 0;
       display: flex;
       align-items: center;
-      background: #f0efea;
-      outline: 1.6px solid #c4c4c4;
-      border-radius: 11px;
       position: relative;
-      overflow: hidden;
       @media (min-width: $sm) {
         width: calc(50% - 7px);
       }
@@ -575,6 +571,10 @@
       display: block;
       padding: 11px 12px;
       flex-grow: 1;
+      border-radius: 11px 0 0 11px;
+      border: 1.6px solid #c4c4c4;
+      border-right: 0;
+      background: #f0efea;
       @media (min-width: $sm) {
         padding: 11px 18px;
       }
@@ -588,8 +588,9 @@
       padding: 11px 12px;
       min-width: 75px;
       outline: none;
-      border-left: 1.6px solid #c4c4c4;
+      border: 1.6px solid #c4c4c4;
       margin: 0;
+      border-radius: 0 11px 11px 0;
       cursor: pointer;
       &:hover {
         background: #ccc;
