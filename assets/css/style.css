@@ -498,7 +498,7 @@ strong { font-weight: bold; }
 .login-wrap .or-text span { position: relative; z-index: 2; }
 .login-wrap .email-ip { border: 1.6px solid #c4c4c4; border-radius: 11px; font-weight: 600; font-size: 14px; line-height: 1.4; text-align: center; color: #757575; padding: 10px 15px; display: block; width: 100%; }
 @media (min-width: 768px) { .login-wrap .email-ip { font-size: 15px; } }
-.login-wrap .email-button { background: #191919; border: 1.6px solid #191919; border-radius: 80px; color: #fff; font-weight: 600; font-size: 14px; line-height: 1.4; text-align: center; display: block; width: 100%; padding: 10px 15px; margin: 20px 0 0; cursor: pointer; }
+.login-wrap .email-button { -webkit-appearance: none; background: #191919; border: 1.6px solid #191919; border-radius: 80px; color: #fff; font-weight: 600; font-size: 14px; line-height: 1.4; text-align: center; display: block; width: 100%; padding: 10px 15px; margin: 20px 0 0; cursor: pointer; }
 @media (min-width: 768px) { .login-wrap .email-button { font-size: 15px; } }
 .login-wrap .email-button:hover { background: #333; }
 .login-wrap .bottom-texts { font-size: 13px; line-height: 1.4; text-align: center; color: #191919; padding: 30px 0 0; }
@@ -831,13 +831,13 @@ body.showScreenPopup .screen-popup { display: block; }
 .invite-card h4 { font-weight: 700; font-size: 20px; line-height: 1.4; margin: 0 0 15px; color: #000000; }
 .invite-card p { font-weight: 400; font-size: 14px; line-height: 1.6; color: #000000; }
 .invite-card .invite-code-wrap { padding: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-.invite-card .invite-code-wrap .invite-code-item { width: 100%; margin: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: #f0efea; outline: 1.6px solid #c4c4c4; border-radius: 11px; position: relative; overflow: hidden; }
+.invite-card .invite-code-wrap .invite-code-item { width: 100%; margin: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; }
 @media (min-width: 768px) { .invite-card .invite-code-wrap .invite-code-item { width: calc(50% - 7px); } }
 .invite-card .invite-code-item { font-weight: 400; font-size: 12px; line-height: 1.4; color: #000000; }
 @media (min-width: 768px) { .invite-card .invite-code-item { font-size: 14px; } }
-.invite-card .invite-code-item span { display: block; padding: 11px 12px; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+.invite-card .invite-code-item span { display: block; padding: 11px 12px; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; border-radius: 11px 0 0 11px; border: 1.6px solid #c4c4c4; border-right: 0; background: #f0efea; }
 @media (min-width: 768px) { .invite-card .invite-code-item span { padding: 11px 18px; } }
-.invite-card .invite-code-item button { display: block; background: #dedcd4; border: 0; height: 100%; padding: 11px 12px; min-width: 75px; outline: none; border-left: 1.6px solid #c4c4c4; margin: 0; cursor: pointer; }
+.invite-card .invite-code-item button { display: block; background: #dedcd4; border: 0; height: 100%; padding: 11px 12px; min-width: 75px; outline: none; border: 1.6px solid #c4c4c4; margin: 0; border-radius: 0 11px 11px 0; cursor: pointer; }
 .invite-card .invite-code-item button:hover { background: #ccc; }
 @media (min-width: 768px) { .invite-card .invite-code-item button { padding: 11px 18px; min-width: 100px; } }
 .invite-card .invited-people-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
